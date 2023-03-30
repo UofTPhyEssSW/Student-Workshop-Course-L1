@@ -22,7 +22,7 @@ class ADC_MAX11635 final {
   public:
     using data_type = std::uint16_t;
     using pin_t = std::uint8_t;
-    using SPIModule = arduino::SPIClassRP2040;
+    using SPIModule = SPIClassRP2040;
 
     ADC_MAX11635() noexcept = delete;
     /**
