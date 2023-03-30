@@ -1,3 +1,6 @@
-[submodule "arduino/libraries/STUSB4500/SparkFun_STUSB4500_Arduino_Library"]
-	path = arduino/libraries/STUSB4500/SparkFun_STUSB4500_Arduino_Library
+[submodule "arduino/libraries/SparkFun_STUSB4500_Arduino_Library"]
+	path = arduino/libraries/SparkFun_STUSB4500_Arduino_Library
 	url = https://github.com/sparkfun/SparkFun_STUSB4500_Arduino_Library.git
+[submodule "arduino/board_manager/arduino-pico"]
+	path = arduino/board_manager/arduino-pico
+	url = https://github.com/earlephilhower/arduino-pico.git
