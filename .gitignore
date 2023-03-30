@@ -1,3 +1,8 @@
+#folders
+hardware/phyduino_pico/*-backups
+
+*.zip
+
 # Prerequisites
 *.d
 

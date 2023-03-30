@@ -1,0 +1,6 @@
+[submodule "arduino/libraries/STUSB4500"]
+path = arduino/libraries/STUSB4500
+url = https://github.com/sparkfun/SparkFun_STUSB4500_Arduino_Library.git
+[submodule "arduino/board_manager"]
+path = arduino/board_manager 
+url = https://github.com/earlephilhower/arduino-pico.git
