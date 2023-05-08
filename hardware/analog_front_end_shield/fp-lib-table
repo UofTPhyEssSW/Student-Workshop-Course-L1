@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Temp")(type "KiCad")(uri "${CLOUD_FP}/Temp.pretty")(options "")(descr "Imported footprints"))
+  (lib (name "analog_front_end")(type "KiCad")(uri "${KIPRJMOD}/libs/fp/analog_front_end.pretty")(options "")(descr ""))
+)

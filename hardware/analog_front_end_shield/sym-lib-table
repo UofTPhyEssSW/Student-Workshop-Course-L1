@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "analog_front_end")(type "KiCad")(uri "${KIPRJMOD}/libs/sym/analog_front_end.kicad_sym")(options "")(descr ""))
+)
