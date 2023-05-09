@@ -39,7 +39,7 @@ namespace max11635 {
       static constexpr float v_resolution        { v_reference / 4096.0F };  // ADC Voltage steps.
       static constexpr std::size_t max_channels  { 4 };                      // Maximum number of analog channels.
           
-      driver() noexcept = default;
+      driver() noexcept = delete;
       
       driver(SPIModule* bus) noexcept : _bus(bus) { }
 
@@ -65,6 +65,16 @@ namespace max11635 {
       
       data_type analogRead(std::uint8_t) noexcept;
       float get_voltage(pin_t) noexcept;
+
+      driver& operator=(SPIModule* spi) noexcept {
+        _bus = spi;
+        return *this;
+      }
+
+      driver& operator=(arduino::SPISettings* settings) noexcept {
+        _settings = settings;
+        return *this;
+      }
 
       static float to_voltage(data_type) noexcept;
     private:

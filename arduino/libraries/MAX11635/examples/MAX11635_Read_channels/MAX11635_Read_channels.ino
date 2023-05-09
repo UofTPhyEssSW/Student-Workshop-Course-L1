@@ -12,14 +12,16 @@
  */
 #include "max11635.h"
 
+#define ARDUINO_SERIAL_PLOTTER  // Comment out for text output instead of Serial plotter format.
+
 // Phyduino Pico Rev C GPIO assignments (Change accoding to board being used.)
-static constexpr pin_t LED_IO       { 4 };
-static constexpr pin_t ADC_MOSI_IO  { 23 };
-static constexpr pin_t ADC_MISO_IO  { 20 };
-static constexpr pin_t ADC_SCK_IO   { 22 };
-static constexpr pin_t ADC_CS_IO    { 21 };
-static constexpr pin_t ADC_nCNST_IO { 18 };
-static constexpr pin_t ADC_nEOC_IO  { 19 };
+static constexpr std::uint32_t LED_IO       { 5 };
+static constexpr std::uint32_t ADC_MOSI_IO  { 23 };
+static constexpr std::uint32_t ADC_MISO_IO  { 20 };
+static constexpr std::uint32_t ADC_SCK_IO   { 22 };
+static constexpr std::uint32_t ADC_CS_IO    { 21 };
+static constexpr std::uint32_t ADC_nCNST_IO { 18 };
+static constexpr std::uint32_t ADC_nEOC_IO  { 19 };
 
 // Sample Buffer
 max11635::driver::data_type Sample [max11635::driver::max_channels] { };
@@ -41,9 +43,18 @@ void loop() {
 
   // Read channels
   for(std::size_t i = 0; i < max11635::driver::max_channels; i++){
-    // Read Analog value
     Sample[i] = MAX11635_ADC.analogRead(i);
+
+    #ifdef ARDUINO_SERIAL_PLOTTER
+    if(i == max11635::driver::max_channels - 1){
+      Serial.printf("CH[%d]:%.3f\r\n", i, max11635::driver::to_voltage(Sample[i]));
+    } else{
+      Serial.printf("CH[%d]:%.3f,", i, max11635::driver::to_voltage(Sample[i]));
+    }
+    #else
+    // Read Analog value
     Serial.printf("Channel[%d] : %.3fV [0x%04x]\r\n", i, max11635::driver::to_voltage(Sample[i]), Sample[i]);
+    #endif
   }
 
   delay(200);

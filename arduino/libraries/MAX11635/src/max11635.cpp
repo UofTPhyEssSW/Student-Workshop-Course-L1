@@ -12,7 +12,7 @@
 
 arduino::SPISettings max11635::driver::default_setting = SPISettings(fclock_default, MSBFIRST, SPIMode::SPI_MODE0);
 
-max11635::driver MAX11635_ADC { };
+max11635::driver MAX11635_ADC { &SPI }; /// Default SPI0 
 
 /**
  * @defgroup MAX11635_DRV_PUBLIC MAX11635 Driver public functions
@@ -23,9 +23,14 @@ max11635::driver MAX11635_ADC { };
  * @brief Initializes and Starts MAX11635 driver.
  */
 void max11635::driver::begin() noexcept {
+  if(_bus == nullptr){
+    return;
+  }
+
   if(_settings == nullptr){
     _settings = &default_setting;
   }
+
   initialize();
 }
 /**
@@ -40,7 +45,9 @@ void max11635::driver::begin(arduino::SPISettings* settings) noexcept {
  * @brief Stops MAX11635 driver.
  */
 void max11635::driver::end() noexcept {
-  _bus->end();
+  if(_bus == nullptr){
+    _bus->end();
+  }
 }
 /**
  * @brief Reads any available analog channel on the Phyduino.
@@ -117,6 +124,10 @@ float max11635::driver::to_voltage(const data_type val) noexcept{
  * @param n [in] Number of bytes to be written.
  */
 void max11635::driver::write_nbytes(std::uint8_t* buf, const std::size_t n) noexcept {
+  if(_bus == nullptr){
+    return;
+  }
+
   #ifdef MAX11635_DEBUG_L3
     if(n > 1){
       Serial.printf("Write N(%d) bytes :\r\n", n);
@@ -144,6 +155,10 @@ void max11635::driver::write_nbytes(std::uint8_t* buf, const std::size_t n) noex
  * @param n Number of bytes to be read.
  */
 void max11635::driver::read_nbytes(std::uint8_t* buf, const std::size_t n) noexcept {
+  if(_bus == nullptr){
+    return;
+  }
+
   _bus->beginTransaction(*_settings);
   digitalWrite(_cs, LOW);
   
@@ -195,9 +210,11 @@ void max11635::driver::initialize() noexcept {
     gpio_set_function(_mosi, GPIO_FUNC_SPI);  
     gpio_set_function(_sck, GPIO_FUNC_SPI);  
   #endif
-
-  _bus->begin();  // Start SPI Class driver.
-  config_regs();
+  
+  if(_bus != nullptr){
+    _bus->begin();  // Start SPI Class driver.
+    config_regs();
+  }
 }
 /**
  * @brief Configures ADC to read analog voltages.

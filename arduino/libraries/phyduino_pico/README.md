@@ -1,8 +1,11 @@
 # Phyduino Pico library
-
-![](https://raw.github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/Phyduino_Pico_RevC.png)
-
 <p><b><i>Current version is compatible with the Phyduino Pico Rev C</i></b></p>
+
+<!--![Phyduino Pico Board Image]("../../../images/Phyduino_Pico_RevC.png")-->
+
+<!-- <img src="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/2efd5742428e9c02718d7eb3282a1d69b2264767/images/Phyduino_Pico_RevC.png" style="float=center"/> -->
+
+![board](https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/Phyduino_Pico_RevC.png?raw=true)
 
 <p>
 This library provides all the basic functions needed to run the Phyduino Pico microcontroller board.
