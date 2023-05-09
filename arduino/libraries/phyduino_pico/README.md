@@ -1,5 +1,7 @@
 # Phyduino Pico library
 
+![](https://raw.github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/Phyduino_Pico_RevC.png)
+
 <p><b><i>Current version is compatible with the Phyduino Pico Rev C</i></b></p>
 
 <p>
