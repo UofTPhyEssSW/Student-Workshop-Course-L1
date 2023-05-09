@@ -15,65 +15,86 @@
 #include <SPI.h>
 #include "max11635_register_map.h"
 
-#ifndef PHYDUINO_PICO_MAX11635_H
-#define PHYDUINO_PICO_MAX11635_H
+#ifndef _MAX11635_ADC_H
+#define _MAX11635_ADC_H
 
-class ADC_MAX11635 final {
-  public:
-    using data_type = std::uint16_t;
-    using pin_t = std::uint8_t;
-    using SPIModule = SPIClassRP2040;
+// #define MAX11635_DEBUG_L1   // Used only to debug analog_read()
+// #define MAX11635_DEBUG_L2   // For internal debugging of the class.
+// #define MAX11635_DEBUG_L3   // used for read and write functions
 
-    ADC_MAX11635() noexcept = delete;
-    /**
-     * @brief Construct a new adc max11635 object
-     * @param bus [in,out] Reference to Board SPI Module.
-     * @note SPI SCK frequency set to 4MHz.
-     */
-    explicit ADC_MAX11635(SPIModule& bus) noexcept : 
-      _bus(bus),
-      _settings({ 4'000'000, MSBFIRST, SPIMode::SPI_MODE0 }){ }
-    /**
-     * @brief Construct a new adc max11635 object
-     * @param bus [in,out] Reference to Board SPI Module.
-     * @param freq [in] SPI bus SCK frequency.
-     */
-    ADC_MAX11635(SPIModule& bus, const unsigned long freq) noexcept : 
-      _bus(bus), 
-      _settings({ freq, MSBFIRST, SPIMode::SPI_MODE0 }) {}
+// #define MAX11635_SPI_CTRL_CS, // only works for single byte transfer.
 
-    void configure_io(pin_t, pin_t, pin_t, pin_t, pin_t, pin_t) noexcept;
+namespace max11635 {
+  static constexpr float conv_vbus = 10.8F;
+  /**
+   * @brief MAX11635 Driver Class
+   */
+  class driver final {
+    public:
+      using data_type = std::uint16_t;
+      using pin_t = std::uint32_t;
+      using SPIModule = SPIClassRP2040;
+      
+      static constexpr float v_reference         { 2.048F };                 // ADC voltage reference.
+      static constexpr float v_resolution        { v_reference / 4096.0F };  // ADC Voltage steps.
+      static constexpr std::size_t max_channels  { 4 };                      // Maximum number of analog channels.
+          
+      driver() noexcept = default;
+      
+      driver(SPIModule* bus) noexcept : _bus(bus) { }
 
-    void begin() noexcept;
-    void begin(const arduino::SPISettings&) noexcept;
-    void end() noexcept;
+      driver(
+        SPIModule* bus, 
+        pin_t mosi, pin_t miso, pin_t sck, pin_t cs,
+        pin_t n_cnvst, pin_t n_eoc) noexcept :
+          _bus(bus),
+          _mosi(mosi),
+          _miso(miso),
+          _sck(sck),
+          _cs(cs),
+          _n_cnvst(n_cnvst),
+          _n_eoc(n_eoc){ }
+      
+      void configure_io(pin_t, pin_t, pin_t, pin_t, pin_t, pin_t) noexcept;
+      
+      void begin() noexcept;
+      void begin(arduino::SPISettings*) noexcept;
+      void end() noexcept;
 
-    void reset() noexcept;
+      void reset() noexcept;
+      
+      data_type analogRead(std::uint8_t) noexcept;
+      float get_voltage(pin_t) noexcept;
 
-    data_type analogRead(pin_t) noexcept;
-    float get_voltage(pin_t) noexcept;
+      static float to_voltage(data_type) noexcept;
+    private:
+      static constexpr std::uint8_t dummy_byte { 0x00 };
+      static constexpr std::uint32_t fclock_default { 4'800'000 };
+      static arduino::SPISettings default_setting;
+      /*
+      * SPI MODE 0 : CPOL = 0; CPHA = 0; <= THIS OR
+      * SPI MODE 1 : CPOL = 0; CPHA = 1;
+      * SPI MODE 2 : CPOL = 1; CPHA = 0;
+      * SPI MODE 3 : CPOL = 1; CPHA = 1; <= THIS
+      */
+      arduino::SPISettings* _settings { nullptr };
+      SPIModule* _bus;   // default SPI 1.
+      max11635::registers_t _regs { };
+      pin_t _mosi     { 23 };
+      pin_t _miso     { 20 };
+      pin_t _sck      { 22 };
+      pin_t _cs       { 21 };
+      pin_t _n_cnvst  { 19 };
+      pin_t _n_eoc    { 18 };
 
-    static float to_voltage(data_type) noexcept;
-    static constexpr float V_REF { 2.048F };
-    static constexpr float V_RES { V_REF / 4096.0F };
-    static constexpr std::uint8_t CHANNELS { 4 };
-  private:
-    static constexpr std::uint8_t DUMMY_BYTE { 0x00 };
-    arduino::SPISettings _settings; // = SPISettings(phyduino::extern_adc::fclock, MSBFIRST, SPIMode::SPI_MODE0);
-    SPIModule& _bus;
-    max1163x_registers_t _regs { };
-    pin_t _mosi { };
-    pin_t _miso { };
-    pin_t _sck { };
-    pin_t _cs { };
-    pin_t _n_cnvst { };
-    pin_t _n_eoc { };
+      void write_nbytes(std::uint8_t*, std::size_t = 1) noexcept;
+      void read_nbytes(std::uint8_t*, std::size_t = 1) noexcept;
+      void initialize() noexcept;
+      data_type get_conversion() noexcept;
+      void config_regs() noexcept;
+  };
+}
 
-    void write_nbytes(std::uint8_t*, std::size_t = 1) noexcept;
-    void read_nbytes(std::uint8_t*, std::size_t = 1) noexcept;
-    data_type get_analog_value() noexcept;
-    void config_regs() noexcept;
-};
+extern max11635::driver MAX11635_ADC;
 
-
-#endif /* PHYDUINO_PICO_MAX11635_H */ 
+#endif

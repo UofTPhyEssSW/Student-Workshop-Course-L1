@@ -5,19 +5,24 @@
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-MAX11635_ADC KEYWORD1
+phyduino::pin_t KEYWORD1
+phyduino::ms_time_t KEYWORD1
+phyduino::baud_rate_t KEYWORD1
+phyduino::gpio KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-configure_io KEYWORD2
-begin	KEYWORD2
-end KEYWORD2
-reset KEYWORD2
-analogRead KEYWORD2
-get_voltage KEYWORD2
-to_voltage KEYWORD2
+phyduino::led_heart_beat KEYWORD2
+phyduino::initialize_board KEYWORD2
+phyduino::pin_heart_beat KEYWORD2
+phyduino::to_voltage KEYWORD2
+phyduino::analogRead KEYWORD2
+phyduino::get_vbus KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
+phyduino::led_delay KEYWORD2
+phyduino::internal_adc_vref LITERAL1
+phyduino::internal_adc_resolution LITERAL1
