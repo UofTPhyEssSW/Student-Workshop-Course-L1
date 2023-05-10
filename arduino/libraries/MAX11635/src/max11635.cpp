@@ -23,10 +23,6 @@ max11635::driver MAX11635_ADC { &SPI }; /// Default SPI0
  * @brief Initializes and Starts MAX11635 driver.
  */
 void max11635::driver::begin() noexcept {
-  if(_bus == nullptr){
-    return;
-  }
-
   if(_settings == nullptr){
     _settings = &default_setting;
   }
@@ -45,7 +41,7 @@ void max11635::driver::begin(arduino::SPISettings* settings) noexcept {
  * @brief Stops MAX11635 driver.
  */
 void max11635::driver::end() noexcept {
-  if(_bus == nullptr){
+  if(!is_initialized()){
     _bus->end();
   }
 }
@@ -56,8 +52,7 @@ void max11635::driver::end() noexcept {
 // data_type analogRead(std::uint8_t) noexcept;
 max11635::driver::data_type max11635::driver::analogRead(std::uint8_t channel) noexcept {
   #ifdef MAX11635_DEBUG_L2
-    // Serial.printf("Analog Pin : %d\r\n", analog_pin);
-    Serial.printf("Selecting external channel : %ld\r\n", channel);
+    Serial.printf("Selecting external channel : %d\r\n", channel);
   #endif
 
   if(channel > driver::max_channels - 1){
@@ -77,7 +72,7 @@ max11635::driver::data_type max11635::driver::analogRead(std::uint8_t channel) n
     Serial.println("Starting Analog to digital conversion.");
   #endif
   
-  while(digitalRead(_n_eoc) == HIGH);
+  while(digitalRead(_n_eoc) == HIGH){ }
 
   #ifdef MAX11635_DEBUG_L2
     Serial.println("Conversion complete.");
@@ -96,7 +91,13 @@ max11635::driver::data_type max11635::driver::analogRead(std::uint8_t channel) n
  * @param ncnvst [in] nConvert IO index
  * @param n_eoc [in] nEOC IO index
  */
-void max11635::driver::configure_io(pin_t mosi, pin_t miso, pin_t sck, pin_t cs, pin_t ncnvst, pin_t n_eoc) noexcept {
+void max11635::driver::configure_io(pin_t mosi, 
+    pin_t miso, 
+    pin_t sck, 
+    pin_t cs, 
+    pin_t ncnvst, 
+    pin_t n_eoc
+  ) noexcept {
     _mosi = mosi;
     _miso = miso;
     _sck = sck;
@@ -110,7 +111,15 @@ void max11635::driver::configure_io(pin_t mosi, pin_t miso, pin_t sck, pin_t cs,
 float max11635::driver::to_voltage(const data_type val) noexcept{
   return static_cast<float>(val) * max11635::driver::v_resolution;
 }
-
+/**
+ * @brief Gets voltage from ADC channel.
+ * @param channel [in] sampled channel number.
+ * @return float Value of the signal in volts.
+ */
+float max11635::driver::get_voltage(std::uint8_t channel) noexcept{
+  auto value = analogRead(channel);
+  return max11635::driver::to_voltage(value);
+}
 /** @} */
 
 /**
@@ -124,7 +133,7 @@ float max11635::driver::to_voltage(const data_type val) noexcept{
  * @param n [in] Number of bytes to be written.
  */
 void max11635::driver::write_nbytes(std::uint8_t* buf, const std::size_t n) noexcept {
-  if(_bus == nullptr){
+  if(!is_initialized()){
     return;
   }
 
@@ -155,7 +164,7 @@ void max11635::driver::write_nbytes(std::uint8_t* buf, const std::size_t n) noex
  * @param n Number of bytes to be read.
  */
 void max11635::driver::read_nbytes(std::uint8_t* buf, const std::size_t n) noexcept {
-  if(_bus == nullptr){
+  if(!is_initialized()){
     return;
   }
 
@@ -173,6 +182,11 @@ void max11635::driver::read_nbytes(std::uint8_t* buf, const std::size_t n) noexc
  * @brief Initialize MAX11635 ADC.
  */
 void max11635::driver::initialize() noexcept {
+  if(_bus == nullptr){
+    initialized = false;
+    return;
+  }
+
   // Set GPIO pins for ADC.
   pinMode(_n_eoc, INPUT_PULLUP);
   pinMode(_n_cnvst, OUTPUT);
@@ -210,11 +224,10 @@ void max11635::driver::initialize() noexcept {
     gpio_set_function(_mosi, GPIO_FUNC_SPI);  
     gpio_set_function(_sck, GPIO_FUNC_SPI);  
   #endif
-  
-  if(_bus != nullptr){
-    _bus->begin();  // Start SPI Class driver.
-    config_regs();
-  }
+ 
+  _bus->begin();  // Start SPI Class driver.
+  config_regs();
+  initialized = true;
 }
 /**
  * @brief Configures ADC to read analog voltages.
