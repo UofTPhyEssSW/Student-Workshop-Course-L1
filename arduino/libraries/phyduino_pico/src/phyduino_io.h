@@ -34,7 +34,6 @@ namespace phyduino {
       constexpr static pin_t nINT     { 4  };
       constexpr static pin_t RESET    { 29 };
   };
-
 }
 
 #endif /* PHYSICS_ESS_PHYDUINO_IO_H_ */

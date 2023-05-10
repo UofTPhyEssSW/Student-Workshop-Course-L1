@@ -139,6 +139,17 @@ void initialize_usbpd() noexcept {
 void phyduino::initialize_board() noexcept {
   initialize_gpio();          // Initializes ALL communication GPIO's
   initialize_usbpd();         // Initializes USB-PD controller.
+
+  MAX11635_ADC.configure_io(    // Configure ADC IO assignments
+    phyduino::extern_adc::MOSI,
+    phyduino::extern_adc::MISO,
+    phyduino::extern_adc::SCK,
+    phyduino::extern_adc::nCS,
+    phyduino::extern_adc::nCNVST,
+    phyduino::extern_adc::nEOC
+  );
+  
+  MAX11635_ADC = &SPI;        // Sets SPI module #
   MAX11635_ADC.begin();       // Initializes External ADC.
 }
 /**
@@ -179,7 +190,7 @@ float phyduino::to_voltage(std::uint16_t value) noexcept {
  * @param idx [in] Analog Pin index.
  * @return std::uint16_t ADC read value.
  */
-std::uint16_t phyduino::analogRead(pin_t idx) noexcept {
+std::uint16_t phyduino::analog_read(pin_t idx) noexcept {
   std::uint16_t value { 0 };
 
   if(idx >= phyduino::gpio::A0 && idx <= phyduino::gpio::A2){

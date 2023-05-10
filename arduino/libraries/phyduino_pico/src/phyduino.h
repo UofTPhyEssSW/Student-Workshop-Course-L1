@@ -16,7 +16,7 @@
 #include <Wire.h>                 // Arduino I2C library
 #include "phyduino_map.h"         // Phyduino IO map
 #include "pico/stdlib.h"          // Raspberry PI Pico standard library
-#include "hardware/adc"           // Raspberry PI Pico ADC library
+#include "hardware/adc.h"           // Raspberry PI Pico ADC library
 #include "SparkFun_STUSB4500.h"   // Depandant library
 #include "max11635.h"             // Dependant library
 
@@ -32,15 +32,15 @@ namespace phyduino {
   static constexpr float internal_adc_resolution  { (internal_adc_vref / 4096.0F) * internal_adc_calibration };
   static constexpr float vbus_multiplier          { 10.8F };
 
-  static constexpr ms_time_t led_delay      { 250 };        // 250ms LED blink time
-  static constexpr uint8_t usbpd_address    { 0x28 };       // USB-PD I2C Address.
-  static constexpr baud_rate_t serial_baud  { 115200 };     // Default Serial Port Baud
+  static constexpr ms_time_t led_delay            { 400 };        // 400ms LED blink time
+  static constexpr uint8_t usbpd_address          { 0x28 };       // USB-PD I2C Address.
+  static constexpr baud_rate_t serial_baud        { 115200 };     // Default Serial Port Baud
 
   void led_heart_beat() noexcept;
   void pin_heart_beat(pin_t, ms_time_t, ms_time_t*) noexcept;
   void initialize_board() noexcept;
   float to_voltage(std::uint16_t) noexcept;
-  std::uint16_t analogRead(pin_t) noexcept;
+  std::uint16_t analog_read(pin_t) noexcept;
   float get_vbus() noexcept;
 }
 

@@ -17,7 +17,7 @@ phyduino::led_heart_beat KEYWORD2
 phyduino::initialize_board KEYWORD2
 phyduino::pin_heart_beat KEYWORD2
 phyduino::to_voltage KEYWORD2
-phyduino::analogRead KEYWORD2
+phyduino::analog_read KEYWORD2
 phyduino::get_vbus KEYWORD2
 
 #######################################
