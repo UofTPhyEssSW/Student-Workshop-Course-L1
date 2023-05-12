@@ -4,3 +4,6 @@
 [submodule "arduino/board_manager/arduino-pico"]
 	path = arduino/board_manager/arduino-pico
 	url = https://github.com/earlephilhower/arduino-pico.git
+[submodule "arduino/libraries/RotaryEncoder"]
+	path = arduino/libraries/RotaryEncoder
+	url = https://github.com/mathertel/RotaryEncoder.git
