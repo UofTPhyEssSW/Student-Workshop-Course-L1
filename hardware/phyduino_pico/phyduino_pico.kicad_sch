@@ -6778,7 +6778,7 @@
     (pin "1" (uuid eb26a43d-c2e3-4f4a-9efb-47d95482001a))
     (pin "2" (uuid d6e72029-6e25-4fcf-8dec-d8f2aa6e29c1))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R18") (unit 1)
         )
@@ -6826,7 +6826,7 @@
     (pin "8" (uuid 17dd2dfc-00ed-47b4-aeae-ec957ac4aa53))
     (pin "9" (uuid ebcda845-c52c-4790-81da-11497ab76142))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "U6") (unit 1)
         )
@@ -6851,7 +6851,7 @@
     )
     (pin "1" (uuid 2ad1f069-81a3-47f3-a5f3-8ca13605c93c))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR026") (unit 1)
         )
@@ -6876,7 +6876,7 @@
     )
     (pin "1" (uuid 028ee01f-e351-436a-ae67-13294da49cf8))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR041") (unit 1)
         )
@@ -6911,7 +6911,7 @@
     (pin "1" (uuid c114e8ad-5825-4a4a-bde3-c3642635727b))
     (pin "2" (uuid 23e12963-5999-4c1f-a079-5850100d1373))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R2") (unit 1)
         )
@@ -6946,7 +6946,7 @@
     (pin "1" (uuid 0a9d45d7-f838-43c2-975d-c2e68685cbf4))
     (pin "2" (uuid 5caea9ac-8a3c-48dc-b388-33d83e15406e))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C38") (unit 1)
         )
@@ -6971,7 +6971,7 @@
     )
     (pin "1" (uuid de7a9a80-7968-488b-9a25-021045876285))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR027") (unit 1)
         )
@@ -7036,7 +7036,7 @@
     (pin "CP" (uuid 11e52f36-0d1c-47b8-a337-33578eec36f0))
     (pin "SH" (uuid 926c85b6-e3f7-4e80-93a4-e166daf9b057))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "J6") (unit 1)
         )
@@ -7071,7 +7071,7 @@
     (pin "1" (uuid a4836290-b5cc-424f-a331-b7d717e2c614))
     (pin "2" (uuid 49d3d3be-5f27-470e-bdc1-bb974d8e96e7))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C18") (unit 1)
         )
@@ -7096,7 +7096,7 @@
     )
     (pin "1" (uuid e741005b-df4d-457f-bb84-64bec70979c4))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR020") (unit 1)
         )
@@ -7131,7 +7131,7 @@
     (pin "1" (uuid eca7bafd-38aa-410e-b865-e92e3e204084))
     (pin "2" (uuid e60032fe-569f-49a0-b9eb-0ccb3645d17b))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C33") (unit 1)
         )
@@ -7166,7 +7166,7 @@
     (pin "1" (uuid f79f8626-1665-4afe-9e84-2601349d8a27))
     (pin "2" (uuid 70e46192-f424-4434-b76a-c9e8aba36d4f))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C15") (unit 1)
         )
@@ -7191,7 +7191,7 @@
     )
     (pin "1" (uuid 9a31fb14-9069-4b2a-ab77-fc87044d107a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR03") (unit 1)
         )
@@ -7235,7 +7235,7 @@
     (pin "7" (uuid 144f5e7d-6e9c-4f48-b9c2-c01eed0c15de))
     (pin "8" (uuid f946dbfc-6ce8-4e45-94f7-584765d3f2a2))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "U2") (unit 1)
         )
@@ -7273,7 +7273,7 @@
     (pin "1" (uuid c60f6d78-e5d5-433c-9b9a-4850ab86a813))
     (pin "2" (uuid 4f393fa3-a502-48ca-85ca-ae313eb9cca7))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "D8") (unit 1)
         )
@@ -7298,7 +7298,7 @@
     )
     (pin "1" (uuid cc26e295-d884-4a43-8081-d21c4db570cf))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR019") (unit 1)
         )
@@ -7333,7 +7333,7 @@
     (pin "1" (uuid 024b901c-2dd6-450a-ad44-04e56118022f))
     (pin "2" (uuid e5574dc3-d131-43fb-8aa0-54266c253d6a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R34") (unit 1)
         )
@@ -7368,7 +7368,7 @@
     (pin "1" (uuid ea8c4be0-113f-49f5-9367-2ddc67bf1b07))
     (pin "2" (uuid 92211df4-a31a-49be-9763-5176a4480808))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R25") (unit 1)
         )
@@ -7393,7 +7393,7 @@
     )
     (pin "1" (uuid c5ac3794-92b2-4af7-bf28-f2e31ae854bc))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR07") (unit 1)
         )
@@ -7418,7 +7418,7 @@
     )
     (pin "1" (uuid 1fcd1b61-a935-4ea7-ab5e-5be52f0d51a3))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR047") (unit 1)
         )
@@ -7445,7 +7445,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "H1") (unit 1)
         )
@@ -7480,7 +7480,7 @@
     (pin "1" (uuid d50042ef-3d6a-4df2-8127-ab66f5ad1f0a))
     (pin "2" (uuid aca3e7a4-a857-42d4-9337-3114895f8d6a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C9") (unit 1)
         )
@@ -7515,7 +7515,7 @@
     (pin "1" (uuid 779569a1-b123-48f7-a901-a29839295685))
     (pin "2" (uuid 70cdf0df-5bd3-46c9-b30d-26fd55f62748))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C31") (unit 1)
         )
@@ -7550,7 +7550,7 @@
     (pin "1" (uuid 9d509459-4534-4029-a3c2-5ba313330085))
     (pin "2" (uuid 34bb32e0-9ff1-414c-8fcd-632fb09cd85a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R20") (unit 1)
         )
@@ -7585,7 +7585,7 @@
     (pin "1" (uuid 7677fbe9-eb14-4aec-97d8-51b989c15363))
     (pin "2" (uuid 80204fd0-f36c-4c14-99a2-4a4a8c99f9c7))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C3") (unit 1)
         )
@@ -7620,7 +7620,7 @@
     (pin "1" (uuid adc87763-dd3b-47e0-b4a1-e338c02a7b9a))
     (pin "2" (uuid 9b5cbe5f-db6b-4c63-8fde-a0be858661a8))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R26") (unit 1)
         )
@@ -7662,7 +7662,7 @@
     (pin "5" (uuid 41fdbfc8-874e-45f0-8195-646e90975b76))
     (pin "6" (uuid a5a774fb-90ab-4fb7-ba72-e97a92472021))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "J4") (unit 1)
         )
@@ -7687,7 +7687,7 @@
     )
     (pin "1" (uuid 058516c4-df57-4c07-97d7-30db333ac3b6))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR042") (unit 1)
         )
@@ -7712,7 +7712,7 @@
     )
     (pin "1" (uuid b10bb374-4db3-4d7e-8182-8ee18432df5f))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR016") (unit 1)
         )
@@ -7737,7 +7737,7 @@
     )
     (pin "1" (uuid 8f9ae450-7702-4803-9299-dd71dca398ed))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR013") (unit 1)
         )
@@ -7772,7 +7772,7 @@
     (pin "1" (uuid b0d58aab-6539-47c1-b88a-d037f7ebcc20))
     (pin "2" (uuid dbb17927-4d88-43f5-85d0-81b1b68a45da))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R16") (unit 1)
         )
@@ -7819,7 +7819,7 @@
     (pin "1" (uuid 9f3d187d-de65-43b0-8b2f-1ba45f4a7173))
     (pin "2" (uuid bb6a02db-1447-443e-ba4b-aa2b36753220))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "D7") (unit 1)
         )
@@ -7844,7 +7844,7 @@
     )
     (pin "1" (uuid 1f2d3ac1-3771-4421-9fe6-b67b785203b1))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR09") (unit 1)
         )
@@ -7871,7 +7871,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "H3") (unit 1)
         )
@@ -7906,7 +7906,7 @@
     (pin "1" (uuid 35de3b6e-c08f-4a4b-96a5-58fefffea43c))
     (pin "2" (uuid 01b06e3f-be09-446f-b7a6-496a6db1c2ae))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R31") (unit 1)
         )
@@ -7941,7 +7941,7 @@
     (pin "1" (uuid 2ba443fe-6d3d-4bb5-879f-72a61a91fe57))
     (pin "2" (uuid c0c27365-ac71-44e2-84c1-542050e62564))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C10") (unit 1)
         )
@@ -7966,7 +7966,7 @@
     )
     (pin "1" (uuid a0ca8cab-7cbc-4a64-a4d4-da59c431677a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR0103") (unit 1)
         )
@@ -8001,7 +8001,7 @@
     (pin "1" (uuid ca3b3148-191a-4617-ac8f-08cfa69d63d6))
     (pin "2" (uuid 4ea561eb-1c5f-4e1a-bcfc-675a4881c923))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R14") (unit 1)
         )
@@ -8036,7 +8036,7 @@
     (pin "1" (uuid 722eb0a5-94f3-4094-826f-e16a50d1299f))
     (pin "2" (uuid 4fb6d196-1496-4647-a658-12f93e256813))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R21") (unit 1)
         )
@@ -8071,7 +8071,7 @@
     (pin "1" (uuid 4ed2ebc4-1af9-4636-9f4d-fe597fbd6951))
     (pin "2" (uuid 577cd47e-54a2-4bcb-8f19-8cf0d0aa07ad))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R38") (unit 1)
         )
@@ -8109,7 +8109,7 @@
     (pin "1" (uuid eba7b642-571d-4e96-af6b-5ad60adc1d2d))
     (pin "2" (uuid 79f22ae9-a8dd-4f2b-a0dd-78d8a5d7c141))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "L1") (unit 1)
         )
@@ -8134,7 +8134,7 @@
     )
     (pin "1" (uuid 471a05a9-5f66-4d1f-80d9-3af6c47c11b0))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR034") (unit 1)
         )
@@ -8169,7 +8169,7 @@
     (pin "1" (uuid 31621418-bcdb-41f6-82ea-797c30a95e56))
     (pin "2" (uuid 43eb35db-cdc7-40a9-96bf-13d0d4357ebb))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C34") (unit 1)
         )
@@ -8194,7 +8194,7 @@
     )
     (pin "1" (uuid 30dc5c66-4851-48ec-97c5-e59f6b70dcde))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR022") (unit 1)
         )
@@ -8287,7 +8287,7 @@
     (pin "8" (uuid d7e24490-b90d-41ad-b482-90f43350df9d))
     (pin "9" (uuid cd6d9657-c3ce-45d1-a51e-d9843eb83949))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "U3") (unit 1)
         )
@@ -8322,7 +8322,7 @@
     (pin "1" (uuid b2afa711-f5ab-44b1-a810-65e83e7cbbd2))
     (pin "2" (uuid 497f4d3b-6c88-4504-a67a-a1532c142cf0))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R12") (unit 1)
         )
@@ -8347,7 +8347,7 @@
     )
     (pin "1" (uuid 686b7590-5078-4122-868f-7111291462b6))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR037") (unit 1)
         )
@@ -8372,7 +8372,7 @@
     )
     (pin "1" (uuid 216ef5ad-9cc0-4bdd-a8ed-3c2673e03941))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR039") (unit 1)
         )
@@ -8397,7 +8397,7 @@
     )
     (pin "1" (uuid 91b987cf-33c4-43ac-9b65-8a14abbedb6f))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR02") (unit 1)
         )
@@ -8441,7 +8441,7 @@
     (pin "7" (uuid 22614aba-2c26-4590-8e12-a7a6b6de48de))
     (pin "8" (uuid bf3524aa-7451-4bff-a4df-53f0aa1c0aeb))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "J2") (unit 1)
         )
@@ -8479,7 +8479,7 @@
     (pin "1" (uuid 76fb1c0e-7ef0-48f1-a5cd-93f226607975))
     (pin "2" (uuid c5c41b6a-d678-4e62-8bc1-730c4837dde3))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "FB1") (unit 1)
         )
@@ -8540,7 +8540,7 @@
     (pin "8" (uuid ac8d2652-7c24-4ede-af2e-2e5f3a77e943))
     (pin "9" (uuid 34420b85-2b71-4b56-9b89-e0cfb06e3f64))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "U4") (unit 1)
         )
@@ -8575,7 +8575,7 @@
     (pin "1" (uuid dcef3ba9-1a9b-4432-aaa1-bfa952cffb5a))
     (pin "2" (uuid f29617b4-e459-40d7-963f-7e9f314ce835))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R5") (unit 1)
         )
@@ -8600,7 +8600,7 @@
     )
     (pin "1" (uuid 355c31a3-2ac4-431e-b8b5-42b3cf467524))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR040") (unit 1)
         )
@@ -8652,7 +8652,7 @@
     (pin "8" (uuid bf01577e-cc0d-4b84-a4ee-a1ce3e026c81))
     (pin "9" (uuid df9c4882-649b-4cda-ae6b-2d902b56e739))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "U5") (unit 1)
         )
@@ -8699,7 +8699,7 @@
     (pin "1" (uuid 0bfc6f47-7526-4dfd-aa4b-2b988123428b))
     (pin "2" (uuid 377b02fa-5ab3-454e-a989-e1767d8468ce))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "D1") (unit 1)
         )
@@ -8734,7 +8734,7 @@
     (pin "1" (uuid ce9b2acb-00b3-4454-985a-228995a3235c))
     (pin "2" (uuid b0bc8e88-9cf0-42ec-811c-b99816876b69))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C29") (unit 1)
         )
@@ -8761,7 +8761,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "H2") (unit 1)
         )
@@ -8799,7 +8799,7 @@
     (pin "1" (uuid 877ed82a-8fa9-4368-b068-8d13d76d3aaa))
     (pin "2" (uuid 2127510a-ce8f-46af-beab-a257f1d0566a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "L2") (unit 1)
         )
@@ -8834,7 +8834,7 @@
     (pin "1" (uuid 104238ec-54f0-48ea-9b7a-a72d24e8dbdf))
     (pin "2" (uuid c89306d0-f7bc-4c3d-b3f0-29530dcd2456))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R11") (unit 1)
         )
@@ -8869,7 +8869,7 @@
     (pin "1" (uuid 1e572d94-9539-4b21-b31d-81f591c2a259))
     (pin "2" (uuid 20df0981-3e54-4f75-94bb-a34745b8392a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R37") (unit 1)
         )
@@ -8904,7 +8904,7 @@
     (pin "1" (uuid 25f74fa1-a7d2-45b2-9e02-fbc72852b2a9))
     (pin "2" (uuid ede866ea-0ee9-45d3-aa08-9e569476a051))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C13") (unit 1)
         )
@@ -8929,7 +8929,7 @@
     )
     (pin "1" (uuid 3259dc18-265a-46b4-bce6-d491ba2c88ba))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR010") (unit 1)
         )
@@ -8954,7 +8954,7 @@
     )
     (pin "1" (uuid 7b0d2dad-b570-4e67-ba8c-160eef8e759e))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR043") (unit 1)
         )
@@ -8979,7 +8979,7 @@
     )
     (pin "1" (uuid 14497208-ce80-4110-baa9-7072e7a63b3e))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR011") (unit 1)
         )
@@ -9014,7 +9014,7 @@
     (pin "1" (uuid c80bb8ca-929b-4163-a3c9-a271b33f08ef))
     (pin "2" (uuid 64163b65-a1ee-41f6-97c4-a5921a09bf91))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C14") (unit 1)
         )
@@ -9049,7 +9049,7 @@
     (pin "1" (uuid 59572224-f4cd-4cea-b1e2-3d7a32647cc0))
     (pin "2" (uuid 7d81da6a-b0b7-4fc1-8a34-7237baa66e2a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R3") (unit 1)
         )
@@ -9084,7 +9084,7 @@
     (pin "1" (uuid 2d0b2158-62cf-48cd-bafb-c19054348b91))
     (pin "2" (uuid d4f1342f-14ad-4201-9ca2-bc08de4c45c1))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R29") (unit 1)
         )
@@ -9109,7 +9109,7 @@
     )
     (pin "1" (uuid afe948da-6ab0-42e7-a1f3-2a759be377bf))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR017") (unit 1)
         )
@@ -9144,7 +9144,7 @@
     (pin "1" (uuid d217b925-46f7-4021-9129-ed6574320da8))
     (pin "2" (uuid f8cdeb63-9d1b-42aa-ae1e-cb86d9ec0277))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R15") (unit 1)
         )
@@ -9182,7 +9182,7 @@
     (pin "1" (uuid 3dc9eacc-18f6-4ab5-86d2-8c7606517944))
     (pin "2" (uuid 778125b5-c94d-40fd-9d19-c52f6958774a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "D3") (unit 1)
         )
@@ -9217,7 +9217,7 @@
     (pin "1" (uuid 1815318c-9da6-408b-8a33-122754271dfa))
     (pin "2" (uuid 4a2698ae-3fb2-461b-87e5-9944c6419695))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R36") (unit 1)
         )
@@ -9252,7 +9252,7 @@
     (pin "1" (uuid af0ca0ed-f6af-4c40-94f0-3de03e2e4d73))
     (pin "2" (uuid ed200978-f9c5-477e-b67f-9c54fbddc4af))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C21") (unit 1)
         )
@@ -9287,7 +9287,7 @@
     (pin "1" (uuid 653174ac-e849-476a-afe7-a59a4ec61540))
     (pin "2" (uuid 09091bb2-491f-499e-a1e4-168ab1065bbe))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R35") (unit 1)
         )
@@ -9322,7 +9322,7 @@
     (pin "1" (uuid ce474033-1c4c-4d54-95ad-f980f008e942))
     (pin "2" (uuid c01426ed-d926-4969-93db-6b284d8208d7))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C39") (unit 1)
         )
@@ -9368,7 +9368,7 @@
     (pin "8" (uuid 266a3dfd-360d-4444-8917-ddabb5ed6dcd))
     (pin "9" (uuid c7ad685b-065c-4161-9343-32cbc66d9502))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "J3") (unit 1)
         )
@@ -9403,7 +9403,7 @@
     (pin "1" (uuid 9f3b5f17-f31b-427d-91d0-64f7b82e3ebe))
     (pin "2" (uuid 41fe941c-e893-47dd-8ef7-3ed1e750e431))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C12") (unit 1)
         )
@@ -9438,7 +9438,7 @@
     (pin "1" (uuid 59bdf677-da1d-4f34-adf5-da4f3401265f))
     (pin "2" (uuid 7542d815-5352-49fa-a409-19664620b8f1))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C8") (unit 1)
         )
@@ -9485,7 +9485,7 @@
     (pin "1" (uuid f67e2bde-cb03-45e0-b360-a7499aa7c7a2))
     (pin "2" (uuid 345fabb2-3bf5-4481-8307-892aacbf4a3c))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "D2") (unit 1)
         )
@@ -9520,7 +9520,7 @@
     (pin "1" (uuid 9554bca4-8146-449f-b905-816c94a5671a))
     (pin "2" (uuid 21897677-17eb-490c-8422-a76d69908d13))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C2") (unit 1)
         )
@@ -9555,7 +9555,7 @@
     (pin "1" (uuid d03332e2-ea0d-4310-8c0a-aaa579a15f88))
     (pin "2" (uuid 6025f522-866d-4c52-85c4-ce7cd66d542a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C16") (unit 1)
         )
@@ -9590,7 +9590,7 @@
     (pin "1" (uuid 66f6fa51-a562-4a49-bb25-33beb2809d81))
     (pin "2" (uuid d711923b-93c5-4f69-965b-873b9af31bbe))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C11") (unit 1)
         )
@@ -9625,7 +9625,7 @@
     (pin "1" (uuid 64b7dff7-8dd2-44e5-82ee-ed200f945b62))
     (pin "2" (uuid 2d9fb1a3-0b58-4b76-9db7-f06b411c1993))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C32") (unit 1)
         )
@@ -9660,7 +9660,7 @@
     (pin "1" (uuid 3cd086a5-d8dd-4d69-a27b-6d5b3993e229))
     (pin "2" (uuid a8bd6775-b07c-444f-ae19-8ac1246bd5a4))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R32") (unit 1)
         )
@@ -9695,7 +9695,7 @@
     (pin "1" (uuid 189d918b-6356-4d07-b0f5-910a0d33e359))
     (pin "2" (uuid 2e5178a8-9c44-4cdc-9492-162ae6d5250f))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C27") (unit 1)
         )
@@ -9720,7 +9720,7 @@
     )
     (pin "1" (uuid 37c0faa9-a182-4dbf-b7f3-474d818200bc))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR012") (unit 1)
         )
@@ -9755,7 +9755,7 @@
     (pin "1" (uuid 7547d72f-cbff-4540-ba33-a2439b7c1da6))
     (pin "2" (uuid 3447a426-2e66-405c-8f75-7a7c124e2d36))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C19") (unit 1)
         )
@@ -9780,7 +9780,7 @@
     )
     (pin "1" (uuid 105b3d68-e165-4d20-968d-047dd85fdb28))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR029") (unit 1)
         )
@@ -9815,7 +9815,7 @@
     (pin "1" (uuid c258010d-36e7-4639-8db4-e2643fa574ca))
     (pin "2" (uuid e474d778-fc05-40e0-95ca-2d0cafd97407))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C5") (unit 1)
         )
@@ -9853,7 +9853,7 @@
     (pin "1" (uuid 7f32ff1b-4fd6-4147-b63b-5107de190a8d))
     (pin "2" (uuid e31b20bc-065e-4b5a-bc07-ffce44661e2d))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "Z1") (unit 1)
         )
@@ -9888,7 +9888,7 @@
     (pin "1" (uuid f9822234-ac1e-47e0-b326-00bb7c385d65))
     (pin "2" (uuid 0baa942c-da65-4f44-a102-1baa6ce6b862))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R30") (unit 1)
         )
@@ -9913,7 +9913,7 @@
     )
     (pin "1" (uuid 235f3381-973c-464f-a49b-4ce39a56d466))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR08") (unit 1)
         )
@@ -9938,7 +9938,7 @@
     )
     (pin "1" (uuid 347b4b4d-07da-4908-9fc2-08dd19a102b5))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR01") (unit 1)
         )
@@ -9973,7 +9973,7 @@
     (pin "1" (uuid 33d2041c-c420-4959-a781-342d7a501d9e))
     (pin "2" (uuid 73f6a1c7-a551-454b-a8b7-88f088f7f8c9))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R24") (unit 1)
         )
@@ -10008,7 +10008,7 @@
     (pin "1" (uuid 2087f4fe-c5d9-4666-9fd9-680e8975223b))
     (pin "2" (uuid 42cd4f1a-819a-4987-8040-48925c0e711f))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R22") (unit 1)
         )
@@ -10043,7 +10043,7 @@
     (pin "1" (uuid 4a447154-516c-4b96-9e8a-42acdb2eb672))
     (pin "2" (uuid b3fd8eca-1c89-43c8-913e-0dc8e0f35f75))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R9") (unit 1)
         )
@@ -10078,7 +10078,7 @@
     (pin "1" (uuid 2a13ad98-2da1-45a7-9a44-389383a24115))
     (pin "2" (uuid 5c09e2d0-1750-46d5-8317-d4f612e1cc0b))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C30") (unit 1)
         )
@@ -10103,7 +10103,7 @@
     )
     (pin "1" (uuid 8958a727-a6a0-4a29-be28-5a7c96d2f3df))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR05") (unit 1)
         )
@@ -10138,7 +10138,7 @@
     (pin "1" (uuid ada0cfcd-2234-4400-af45-a8deab829d64))
     (pin "2" (uuid 91f3bfd2-8d78-4b73-931a-696892f15931))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C36") (unit 1)
         )
@@ -10173,7 +10173,7 @@
     (pin "1" (uuid 5710115b-038c-46e9-8f9f-433611052070))
     (pin "2" (uuid 6e444d78-4ac0-46f8-b036-06656447122b))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C25") (unit 1)
         )
@@ -10208,7 +10208,7 @@
     (pin "1" (uuid fdde6a2a-254f-4b8e-991f-8e6e08271851))
     (pin "2" (uuid f957e4ff-c8ec-4186-a842-ce9f679812f6))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C7") (unit 1)
         )
@@ -10243,7 +10243,7 @@
     (pin "1" (uuid 62ede3ff-c46d-499f-bc7a-a9f337dc3bd3))
     (pin "2" (uuid a3304dd5-ddaf-47e6-86cb-15db601c9f84))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R6") (unit 1)
         )
@@ -10268,7 +10268,7 @@
     )
     (pin "1" (uuid ade9bc1b-5473-4c0c-9b6a-4abfa1d9e213))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR036") (unit 1)
         )
@@ -10303,7 +10303,7 @@
     (pin "1" (uuid 77ec0ab6-04eb-43d2-8c2e-6f71e7032a67))
     (pin "2" (uuid 6d8bb463-ceaa-4cea-b342-9eac74d7918f))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R23") (unit 1)
         )
@@ -10350,7 +10350,7 @@
     (pin "1" (uuid 9b5a0bc8-c400-4fc7-8dc8-f1e74d5cefd4))
     (pin "2" (uuid d186fbb7-83c2-47e2-b7ad-1e3df18bfea9))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "D6") (unit 1)
         )
@@ -10375,7 +10375,7 @@
     )
     (pin "1" (uuid 61977381-46a9-4ed0-abf0-98a8b6604a65))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR06") (unit 1)
         )
@@ -10422,7 +10422,7 @@
     (pin "9_1" (uuid 0a301bbb-6931-4f2c-9ab3-b6ac19e25a9b))
     (pin "9_2" (uuid be9509f5-552a-44ed-9023-12155501cf61))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "Q1") (unit 1)
         )
@@ -10457,7 +10457,7 @@
     (pin "1" (uuid 05edafe1-f908-4903-9399-0ead22b0474d))
     (pin "2" (uuid fd5a058c-7eff-42f2-ac9d-29a5dc58b753))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C17") (unit 1)
         )
@@ -10501,7 +10501,7 @@
     (pin "1" (uuid 3c5ccd86-2b6e-458b-b100-31eab5d1c7b1))
     (pin "2" (uuid f25f7a9d-2205-46d7-9577-1963f50afa99))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "D5") (unit 1)
         )
@@ -10542,7 +10542,7 @@
     (pin "4" (uuid 6ac51d26-9d0b-4bb3-9e1f-8465bec66e24))
     (pin "5" (uuid cc4b34a8-da67-4672-8414-99e4d5540a17))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "J1") (unit 1)
         )
@@ -10567,7 +10567,7 @@
     )
     (pin "1" (uuid 29dd0943-5dea-4582-82ae-44a67d299a4e))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR025") (unit 1)
         )
@@ -10592,7 +10592,7 @@
     )
     (pin "1" (uuid e25a6921-9c16-4044-9432-431e2360d9ce))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR044") (unit 1)
         )
@@ -10627,7 +10627,7 @@
     (pin "1" (uuid d30ef531-8ac8-4ad0-8746-8bb1d9008abc))
     (pin "2" (uuid 7de3a159-936f-46f7-8f07-018739145a6e))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R7") (unit 1)
         )
@@ -10652,7 +10652,7 @@
     )
     (pin "1" (uuid 013cc31a-aeb1-4b97-abb4-9a08344bee2f))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR038") (unit 1)
         )
@@ -10687,7 +10687,7 @@
     (pin "1" (uuid 18a9e924-345c-4a2d-ba08-595ffc779d26))
     (pin "2" (uuid 56e9160f-9a2e-4d54-887a-1ca17368617a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R1") (unit 1)
         )
@@ -10712,7 +10712,7 @@
     )
     (pin "1" (uuid d6b56be4-5209-4f44-9005-d465763079a4))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR0104") (unit 1)
         )
@@ -10737,7 +10737,7 @@
     )
     (pin "1" (uuid 68f6b0a9-1e39-4302-ae1a-7a0483f16c5d))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR030") (unit 1)
         )
@@ -10762,7 +10762,7 @@
     )
     (pin "1" (uuid b4deeacd-bae9-4d70-ba9f-26b9eb999097))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR023") (unit 1)
         )
@@ -10797,7 +10797,7 @@
     (pin "1" (uuid 97fbcd16-324b-426a-bc02-186a6c99daf7))
     (pin "2" (uuid 727af146-fd7e-4037-a297-e6bcceccaf56))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C22") (unit 1)
         )
@@ -10832,7 +10832,7 @@
     (pin "1" (uuid c78f4b1e-2cb7-4dcf-b119-917a6f6e7a35))
     (pin "2" (uuid f95bd83b-a1d3-41df-85e6-7104788051ae))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C35") (unit 1)
         )
@@ -10867,7 +10867,7 @@
     (pin "1" (uuid 96b537e5-2693-4850-816b-08913baeff7a))
     (pin "2" (uuid a81a496a-265a-440f-888e-26698279d7b9))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R28") (unit 1)
         )
@@ -10881,13 +10881,13 @@
     (property "Reference" "Y1" (at 165.1 72.39 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "H130B-12.000-18-3030-TR" (at 162.56 74.93 90)
+    (property "Value" "ABM8AIG-12.000MHz-2-T" (at 162.56 74.93 90)
       (effects (font (size 0.762 0.762)) (justify right) hide)
     )
     (property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm" (at 170.18 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://www.raltron.com/webproducts/specs/CRYSTAL/H130B-12.000-18-3030-TR.pdf" (at 170.18 76.2 0)
+    (property "Datasheet" "https://www.mouser.ca/datasheet/2/3/ABM8AIG-1775167.pdf" (at 170.18 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "FREQ" "12MHz" (at 170.18 76.2 90)
@@ -10910,7 +10910,7 @@
     (pin "3" (uuid 71d7a451-bb9a-4713-be5e-db3597c1e331))
     (pin "4" (uuid 0cfd93a7-ea7c-458a-8210-fb70a36753be))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "Y1") (unit 1)
         )
@@ -10945,7 +10945,7 @@
     (pin "1" (uuid 8c61f800-fc8c-4fb6-85ec-76307123f7c4))
     (pin "2" (uuid 2d14cf63-10d2-412e-a848-ce5bcce176cf))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R8") (unit 1)
         )
@@ -10980,7 +10980,7 @@
     (pin "1" (uuid a81da0d3-140e-4514-bffa-fa6b3d1fc0ca))
     (pin "2" (uuid 1dca6ab7-590a-44e9-a6cb-4db761679976))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R27") (unit 1)
         )
@@ -11024,7 +11024,7 @@
     (pin "7" (uuid 7aa764e1-3e91-4635-9872-7dcfdfece0d6))
     (pin "8" (uuid ce368fad-128b-4bc7-842b-32432ad9aaba))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "J5") (unit 1)
         )
@@ -11059,7 +11059,7 @@
     (pin "1" (uuid 72770610-55fe-41b5-a6b9-912ed8109097))
     (pin "2" (uuid 3aabaa3f-58bd-4cb0-ab8f-31305b92f4cf))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R4") (unit 1)
         )
@@ -11084,7 +11084,7 @@
     )
     (pin "1" (uuid 57c2d868-a69d-40a2-85fd-6df5b2ae5636))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR035") (unit 1)
         )
@@ -11119,7 +11119,7 @@
     (pin "1" (uuid 9f8ffea6-e217-4937-a7da-ecc18b6f2142))
     (pin "2" (uuid 2d18c2ca-e70b-481c-856b-af3634288c73))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C37") (unit 1)
         )
@@ -11154,7 +11154,7 @@
     (pin "1" (uuid 1300424e-6041-42c3-8b5e-e32d26b15415))
     (pin "2" (uuid 3fc38021-d9df-404b-b636-9f8b49fb4b3d))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R13") (unit 1)
         )
@@ -11179,7 +11179,7 @@
     )
     (pin "1" (uuid 2d21e711-d5aa-4b84-b6d0-20148bef49a5))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR04") (unit 1)
         )
@@ -11204,7 +11204,7 @@
     )
     (pin "1" (uuid e2b27efa-1921-42a3-91d4-0b4d4c4ffda4))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR015") (unit 1)
         )
@@ -11229,7 +11229,7 @@
     )
     (pin "1" (uuid 3f2f660b-8c8f-4a11-b49f-f4e53412fec7))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR045") (unit 1)
         )
@@ -11254,7 +11254,7 @@
     )
     (pin "1" (uuid b4e93801-91d9-4246-9db4-8faaff3ab336))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR031") (unit 1)
         )
@@ -11279,7 +11279,7 @@
     )
     (pin "1" (uuid 07526fb4-e2bb-4600-964a-5c9c81e2050c))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR014") (unit 1)
         )
@@ -11314,7 +11314,7 @@
     (pin "1" (uuid 0920bbc5-ff7c-4980-b1a6-6419d50f0e1e))
     (pin "2" (uuid d06d607f-bfaa-44c6-b903-c73c43f21024))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R33") (unit 1)
         )
@@ -11358,7 +11358,7 @@
     (pin "7" (uuid 54b3a369-78f6-4c2b-8526-e6f7e7ecc506))
     (pin "8" (uuid 2e181877-d736-4309-a828-f84c94a24f74))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "U1") (unit 1)
         )
@@ -11393,7 +11393,7 @@
     (pin "1" (uuid 661451c9-e52e-45a7-a456-e97a02d72a2c))
     (pin "2" (uuid 834925c8-7f85-48d3-ac1f-b00b7f2c4be7))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C6") (unit 1)
         )
@@ -11428,7 +11428,7 @@
     (pin "1" (uuid c3f30239-50ef-4fb6-9692-8795e905af23))
     (pin "2" (uuid b9fd1282-1e7b-41f7-b128-943bc5fe6bc3))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C1") (unit 1)
         )
@@ -11453,7 +11453,7 @@
     )
     (pin "1" (uuid bcae6336-af8c-4e26-9624-b04dc89ed443))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR0101") (unit 1)
         )
@@ -11478,7 +11478,7 @@
     )
     (pin "1" (uuid cbbf9588-ef88-41bf-9112-7b55c0ea347e))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR032") (unit 1)
         )
@@ -11503,7 +11503,7 @@
     )
     (pin "1" (uuid 04bf1e2b-e23f-4f4c-8f0e-8951909b0536))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR018") (unit 1)
         )
@@ -11538,7 +11538,7 @@
     (pin "1" (uuid 081f3d09-799c-4c0f-b97c-6f923527e2cc))
     (pin "2" (uuid 866a17ba-025a-4002-8479-2e06278f1087))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C24") (unit 1)
         )
@@ -11573,7 +11573,7 @@
     (pin "1" (uuid 007231d2-62e9-4ff2-a6a1-9b28881f64e1))
     (pin "2" (uuid fd1497b3-0cc3-4878-b21f-c28562de910d))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R19") (unit 1)
         )
@@ -11597,7 +11597,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#LOGO1") (unit 1)
         )
@@ -11632,7 +11632,7 @@
     (pin "1" (uuid f1a5ac9f-b7f9-4945-8eae-f681af79ed7b))
     (pin "2" (uuid 395b9845-7232-4fa9-8106-3f2465176b22))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C26") (unit 1)
         )
@@ -11667,7 +11667,7 @@
     (pin "1" (uuid 70945203-5f4b-4075-b504-8a3d9bff7dbc))
     (pin "2" (uuid d55ebbbe-1102-4cdc-8959-c08cea8c6957))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R10") (unit 1)
         )
@@ -11692,7 +11692,7 @@
     )
     (pin "1" (uuid 90818e4f-5f64-47c0-b43e-8b589e382d1c))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR024") (unit 1)
         )
@@ -11727,7 +11727,7 @@
     (pin "1" (uuid e1f7acba-a2cc-4cbf-a6fd-50c4a42164ec))
     (pin "2" (uuid 7d147325-38a3-46c6-a99c-046999bfd030))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C20") (unit 1)
         )
@@ -11762,7 +11762,7 @@
     (pin "1" (uuid 1aead402-db1b-4912-91f9-e83ebd3d6963))
     (pin "2" (uuid d680c2a4-0d7b-4009-b638-2d6204da3939))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C28") (unit 1)
         )
@@ -11797,7 +11797,7 @@
     (pin "1" (uuid d42347ed-75fb-4c8c-b913-562c420ae0e5))
     (pin "2" (uuid 0f39b35f-6d13-4b09-955f-9c6edb7db020))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C23") (unit 1)
         )
@@ -11835,7 +11835,7 @@
     (pin "1" (uuid f6b9ee5b-8116-416e-bcaa-f58f6dec62b8))
     (pin "2" (uuid 9359880e-ee29-4880-bee7-e3ce0e11e0c7))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "U7") (unit 1)
         )
@@ -11860,7 +11860,7 @@
     )
     (pin "1" (uuid f8223714-af80-4b48-9186-ac1e4887ab61))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR028") (unit 1)
         )
@@ -11885,7 +11885,7 @@
     )
     (pin "1" (uuid ee8f08f5-6535-4f4e-940d-e081e7240550))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR046") (unit 1)
         )
@@ -11920,7 +11920,7 @@
     (pin "1" (uuid b50e8207-cda3-4b05-8830-764318a1840a))
     (pin "2" (uuid 8a573d19-edad-447d-8136-cd0a52698d95))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R17") (unit 1)
         )
@@ -11955,7 +11955,7 @@
     (pin "1" (uuid 395b74de-5e35-4315-89b6-82402e8f134a))
     (pin "2" (uuid 4cfac3bc-eb44-491e-8132-b8a745afdb7e))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R39") (unit 1)
         )
@@ -11980,7 +11980,7 @@
     )
     (pin "1" (uuid 4601239d-0bd7-4a3d-95a0-66c3e64a86e5))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR033") (unit 1)
         )
@@ -12018,7 +12018,7 @@
     (pin "1" (uuid 0db4e1c5-3484-4a59-bd47-cceaf6a6ff3c))
     (pin "2" (uuid b1e54104-ae18-4cee-adec-88701a9552e0))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "SW2") (unit 1)
         )
@@ -12043,7 +12043,7 @@
     )
     (pin "1" (uuid ebecb53d-3a75-43d4-b596-cca5a9a42764))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR021") (unit 1)
         )
@@ -12078,7 +12078,7 @@
     (pin "1" (uuid a49c5c33-1879-46c5-81ca-9a5c308812c1))
     (pin "2" (uuid a1c6f2de-14e8-4cd8-abb3-00e7ff7940f2))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C4") (unit 1)
         )
@@ -12117,7 +12117,7 @@
     (pin "2" (uuid 2de8c2c3-fad3-4992-a9d9-4ee753bafb0c))
     (pin "3" (uuid eaa384d5-c5c7-4966-b8f9-eb59eccefc4a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "SW1") (unit 1)
         )
@@ -12142,7 +12142,7 @@
     )
     (pin "1" (uuid 5d442eb7-9623-4788-9c6f-367c6412ba8a))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR0102") (unit 1)
         )
@@ -12180,7 +12180,7 @@
     (pin "1" (uuid 44351dc1-a05b-4ce4-9cf1-6341f260be2b))
     (pin "2" (uuid 214b13c1-4efd-475d-8b96-eb102a58ecfb))
     (instances
-      (project "Phyduino_Pico_RevC"
+      (project "phyduino_pico"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "D4") (unit 1)
         )
