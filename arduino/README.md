@@ -17,6 +17,7 @@ There are 3 libraries that need to be added to the Arduino IDE for coding with t
 1. Sparkfun STUSB4500 Arduino Library
 2. MAX11635 ADC Arduino Library
 3. Phyduino Pico Library.
+4. Analog Front End Arduino Library
 
 <p>
 
