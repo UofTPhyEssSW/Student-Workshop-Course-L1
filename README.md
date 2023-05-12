@@ -1,5 +1,7 @@
 # Student-Workshop-Course-L1
 
+<img src="https://www.physics.utoronto.ca/media/images/Student_Workshop_002.width-800.jpg" style="float= center">
+
 <p>
 This is a non-credit Introduction to Electronics Graduate course for University of Toronto, Physics Gradute students, held over four, three-hour sessions which consist of one hour of lecture and two hours of practical time.
 </p>
@@ -16,14 +18,14 @@ If the class is full and your are still interested, please add yourself to the w
 
 # Aruduino Framework
 <p>
-The Arduino IDE 2 is used to demostrate the Phyduino Pico and Analog Front End board. Since these are custom boards a new board manager and libraries must be installed in the IDE for the boards to be programmed. (<a href="">instructions here</a>). 
+The Arduino IDE 2 is used to demostrate the Phyduino Pico and Analog Front End board. Since these are custom boards a new board manager and libraries must be installed in the IDE for the boards to be programmed. (<a href="https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-board-manager">instructions here</a>). 
 </p>
 
 # Required Arduino Libraries 
-- <a href="">Sparkfun STUSB4500 Arduino library</a>
-- <a href="">MAX11635 ADC Arduino Libray</a>
-- <a href="">Phyduino Board Library</a>
-- <a href="">Analog Front End Arduino Library</a>
+- <a href="https://github.com/sparkfun/SparkFun_STUSB4500_Arduino_Library/tree/7f76188b7900d930aeb7908319d463b6446257c6">Sparkfun STUSB4500 Arduino library</a>
+- <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/MAX11635">MAX11635 ADC Arduino Libray</a>
+- <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/phyduino_pico">Phyduino Board Library</a>
+- <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/Analog_Front_End_Arduino_Library">Analog Front End Arduino Library</a>
 
 # Hardware 
 
