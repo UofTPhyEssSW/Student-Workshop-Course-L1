@@ -9,7 +9,7 @@ The library provides all the basic functions needed to run the Analog Front End 
 </p>
 
 # Repository Contents
-- /examples - .ino files examples for the Phyduino Pico board.
+- /examples - .ino files examples for the Analog Front End board.
 - /src - Source files for the library (.cpp, h)
 - keyword.txt - Keyword for this library that are highlighted in the Arduino IDE.
 - library.properties - Library properties for the Arduino Package Manager.
@@ -19,4 +19,4 @@ The library provides all the basic functions needed to run the Analog Front End 
     - <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/hardware/analog_front_end_shield">Analog Front End Shield</a>
 # Library Dependencies
 - <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/phyduino_pico">Phyduino Library</a>
-- <a href=https://github.com/mathertel/RotaryEncoder" Rotary Encoder Library
+- <a href="https://github.com/mathertel/RotaryEncoder"> Rotary Encoder Library</a>

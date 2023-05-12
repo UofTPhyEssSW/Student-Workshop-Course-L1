@@ -26,7 +26,7 @@ The Arduino IDE 2 is used to demostrate the Phyduino Pico and Analog Front End b
 - <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/MAX11635">MAX11635 ADC Arduino Libray</a>
 - <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/phyduino_pico">Phyduino Board Library</a>
 - <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/Analog_Front_End_Arduino_Library">Analog Front End Arduino Library</a>
-
+- <a href="https://github.com/mathertel/RotaryEncoder">Rotary Encoder Library</a>
 # Hardware 
 
 <p>
