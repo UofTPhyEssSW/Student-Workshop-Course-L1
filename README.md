@@ -23,6 +23,7 @@ The Arduino IDE 2 is used to demostrate the Phyduino Pico and Analog Front End b
 - <a href="">Sparkfun STUSB4500 Arduino library</a>
 - <a href="">MAX11635 ADC Arduino Libray</a>
 - <a href="">Phyduino Board Library</a>
+- <a href="">Analog Front End Arduino Library</a>
 
 # Hardware 
 
