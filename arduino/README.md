@@ -15,7 +15,7 @@ There are 5 libraries that need to be added to the Arduino IDE for coding with t
 </p>
 
 1. <a href="https://github.com/sparkfun/SparkFun_STUSB4500_Arduino_Library/tree/7f76188b7900d930aeb7908319d463b6446257c6">Sparkfun STUSB4500 Arduino Library</a>
-2. <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/MAX11635">MAX11635 ADC Arduino Library</a>
+2. <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/max11635_adc">MAX11635 ADC Arduino Library</a>
 3. <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/phyduino_pico">Phyduino Pico Library.</a>
 4. <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/Analog_Front_End_Arduino_Library">Analog Front End Arduino Library</a>
 5. <a href="https://github.com/mathertel/RotaryEncoder">Rotary Encoder Library</a>
