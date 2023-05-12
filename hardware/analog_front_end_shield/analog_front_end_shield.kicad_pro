@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.9,
-          "height": 1.8,
-          "width": 1.8
+          "drill": 1.0,
+          "height": 1.7,
+          "width": 1.7
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -126,7 +126,7 @@
         "min_text_height": 0.7999999999999999,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.25,
+        "min_track_width": 0.15,
         "min_via_annular_width": 0.15,
         "min_via_diameter": 0.6,
         "solder_mask_clearance": 0.0,
@@ -516,7 +516,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.25,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
