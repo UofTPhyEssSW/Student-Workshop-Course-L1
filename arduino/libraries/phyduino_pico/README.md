@@ -19,4 +19,4 @@ This library provides all the basic functions needed to run the Phyduino Pico mi
     - <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/hardware/phyduino_pico">Phyduino Pico Microcontroller Board</a>
 # Library Dependencies
 - <a href="https://github.com/sparkfun/SparkFun_STUSB4500_Arduino_Library">SparkFun STUSB4500 Arduino Library</a>
-- <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/MAX11635">MAX11635 Arudino Library</a> 
+- <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/max11635_adc">MAX11635 Arudino Library</a> 
