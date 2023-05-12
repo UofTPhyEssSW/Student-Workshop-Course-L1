@@ -23,7 +23,7 @@ The Arduino IDE 2 is used to demostrate the Phyduino Pico and Analog Front End b
 
 # Required Arduino Libraries 
 - <a href="https://github.com/sparkfun/SparkFun_STUSB4500_Arduino_Library/tree/7f76188b7900d930aeb7908319d463b6446257c6">Sparkfun STUSB4500 Arduino library</a>
-- <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/MAX11635">MAX11635 ADC Arduino Libray</a>
+- <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/max11635_adc">MAX11635 ADC Arduino Libray</a>
 - <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/phyduino_pico">Phyduino Board Library</a>
 - <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/arduino/libraries/Analog_Front_End_Arduino_Library">Analog Front End Arduino Library</a>
 - <a href="https://github.com/mathertel/RotaryEncoder">Rotary Encoder Library</a>
@@ -35,5 +35,5 @@ All circuit boards for this course were designed using <a href="https://www.kica
 
 ## Boards
 
-- <a href="">Phyduino Pico Microcontroller board</a>
-- <a href="">Analog Front End board</a>
+- <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/hardware/phyduino_pico">Phyduino Pico Microcontroller board</a>
+- <a href="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/tree/main/hardware/analog_front_end_shield">Analog Front End board</a>
