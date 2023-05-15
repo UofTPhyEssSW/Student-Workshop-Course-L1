@@ -1,8 +1,6 @@
 #folders
-hardware/phyduino_pico/*-backups
-hardware/analog_front_end/*-backups
-*.zip
-
+hardware/phyduino_pico/phyduino_pico-backups
+hardware/analog_front_end_shield/analog_front_end_shield-backups
 # Prerequisites
 *.d
 
