@@ -7,7 +7,7 @@ Each board is designed using open source software <a href="https://www.kicad.org
 </p>
 
 # Analog Front End PCB
-<img src="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/AFE_Shield_RevC.png?raw=true" height="500px">
+<img src="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/analog_front_end_side.png?raw=true" height="500px">
 <p>
 The Analog Front End (AFE) Board is a demostration board that is specifically designed to interface with the Phyduino Pico board, though it is compatiable with other Arduino boards. It is used to train students on good through hole soldering techiques, basic data acquisition (DAQ) techniques, and digital interface.
 </p>
@@ -19,7 +19,7 @@ In addition to analog signals the AFE board also has digital input and output. T
 </p>
 
 # Phyduino Pico PCB
-<img src="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/Phyduino_Pico_RevC.png?raw=true" height="500px">
+<img src="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/Phyduino Pico Side.png?raw=true" height="500px">
 <p>
 The Phyduino Pico is an Arduino compatible microcontroller board the can be programmed using the <a href="https://docs.arduino.cc/software/ide-v2">Arduino IDE</a>. The Phyduino Pico uses the <a href="https://www.raspberrypi.com/products/rp2040/">Raspberry PI Pico micorcontroller</a> (RP2040) with 2 ARM Cortex-M0+ processors (133MHz) and 264KB of RAM. All programming code is stored in an external 16MB flash chip that can be both programming memory and solid state drive. The microcontroller can be program in C/C++ or <a href="https://www.raspberrypi.com/documentation/microcontrollers/micropython.html">MicroPython</a>. This course only shows examples with C/C++ programming, however there are many tutorials online for programming the RP2040 with MicroPython. 
 </p>
