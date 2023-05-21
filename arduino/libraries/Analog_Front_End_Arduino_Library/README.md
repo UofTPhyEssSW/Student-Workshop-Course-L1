@@ -2,7 +2,7 @@
 
 <p><b><i>Current version is compatible with the Analog Front End Rev C board</i></b></p>
 
-![board](https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/AFE_Shield_RevC.png?raw=true)
+![board](https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/analog_front_end_side.png?raw=true)
 
 <p>
 The library provides all the basic functions needed to run the Analog Front End board.

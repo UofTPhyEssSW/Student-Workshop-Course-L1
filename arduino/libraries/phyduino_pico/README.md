@@ -1,7 +1,7 @@
 # Phyduino Pico Arduino Library
 <p><b><i>Current version is compatible with the Phyduino Pico Rev C</i></b></p>
 
-![board](https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/Phyduino_Pico_RevC.png?raw=true)
+![board](https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/Phyduino%20Pico%20Side.png?raw=true')
 
 <p>
 This library provides all the basic functions needed to run the Phyduino Pico microcontroller board.
