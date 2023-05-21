@@ -1,4 +1,5 @@
 #folders
+venv
 .idea
 hardware/phyduino_pico/phyduino_pico-backups
 hardware/phyduino_pico/exports
