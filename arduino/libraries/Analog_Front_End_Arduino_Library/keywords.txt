@@ -5,12 +5,29 @@
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-
+afe_shield KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
+get_temperature KEYWORD2
+get_sensor_voltage KEYWORD2
+get_potentiometer KEYWORD2
+periodic_ms KEYWORD2
+periodic_us KEYWORD2
+
 #######################################
 # Constants (LITERAL1)
 #######################################
+
+RED_LED LITERAL1
+GREEN_LED LITERAL1
+ENC_A LITERAL1
+ENC_B LITERAL1
+ENC_SW LITERAL1
+TEMPERATURE0 LITERAL1
+TEMPERATURE1 LITERAL1
+TEMP_SENSOR LITERAL1
+SENSOR_VOUT LITERAL1
+POTENTIOMETER LITERAL1
