@@ -1,6 +1,8 @@
 # Course Hardware
 <p>
-There are two boards that are built by the students in the course. The first is the Analog Front End PCB with helps the student practise through hole soldering. The second is the Phyduino Pico PCB which continues the soldering training, learning how solder surface mount components.
+There are two boards that are built by the students in the course. The first is the Analog Front End PCB with helps the 
+student practise through hole soldering. The second is the Phyduino Pico PCB which continues the soldering training, 
+learning how solder surface mount components.
 </p>
 <p>
 Each board is designed using open source software <a href="https://www.kicad.org/">KiCAD EDA</a> design software.
@@ -9,13 +11,21 @@ Each board is designed using open source software <a href="https://www.kicad.org
 # Analog Front End PCB
 <img src="https://github.com/UofTPhyEssSW/Student-Workshop-Course-L1/blob/main/images/analog_front_end_side.png?raw=true" height="500px">
 <p>
-The Analog Front End (AFE) Board is a demostration board that is specifically designed to interface with the Phyduino Pico board, though it is compatiable with other Arduino boards. It is used to train students on good through hole soldering techiques, basic data acquisition (DAQ) techniques, and digital interface.
+The Analog Front End (AFE) Board is a demonstration board that is specifically designed to interface with the Phyduino 
+Pico board, though it is compatible with other Arduino boards. It is used to train students on good through hole 
+soldering techniques, basic data acquisition (DAQ) techniques, and digital interface.
 </p>
 <p>
-The AFE board has a <a href="https://www.ti.com/product/LMT84/part-details/LMT84LPM">LMT84LPM</a> temperature sensor with an analog output. It's temperature range is –50°C to 150°C. This sensor is used to demostrate DAQ circuit design and step necessary to aquire data from analog signal. The temperature signal is output on A0 or A3 depending on JP2 jumper position. Otherthan the temperature signal the AFE board also outputs analog signals from the sensor connector (J2), the potentiometer (RV1), and the voltage output of the LMT84 (U1) temperature sensor before signal conditioning.
+The AFE board has a <a href="https://www.ti.com/product/LMT84/part-details/LMT84LPM">LMT84LPM</a> temperature sensor with 
+an analog output. Its temperature range is –50°C to 150°C. This sensor is used to demonstrate DAQ circuit design and step 
+necessary to acquire data from analog signal. The temperature signal is output on A0 or A3 depending on JP2 jumper position. 
+Other than the temperature signals the AFE board also outputs analog signals from the sensor connector (J2), the potentiometer (RV1), 
+and the voltage output of the LMT84 (U1) temperature sensor before signal conditioning.
 </p>
 <p>
-In addition to analog signals the AFE board also has digital input and output. The rotary encoder (ENC1) in used for digital input which can be used to control paramter within the Phyduino Pico program being run. LED's D1 and D2 can be used to output current status of the program or just flash on and off to indicate the program has not froze.
+In addition to analog signals the AFE board also has digital input and output. The rotary encoder (ENC1) in used for 
+digital input which can be used to control parameter within the Phyduino Pico program being run. LED's D1 and D2 can be 
+used to output current status of the program or just flash on and off to indicate the program has not froze.
 </p>
 
 # Phyduino Pico PCB
