@@ -48,7 +48,6 @@ void setup(){
     pinMode(afe_shield::io::ENC_B , INPUT);
     pinMode(afe_shield::io::ENC_SW, INPUT);
 
-    // TODO : Add interrupt handler here for rotary encoder.
     encoder = new RotaryEncoder(afe_shield::io::ENC_A, afe_shield::io::ENC_B, RotaryEncoder::LatchMode::TWO03);
 
     // Register Interrupts
