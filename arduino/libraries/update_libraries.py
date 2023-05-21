@@ -21,8 +21,6 @@ def get_lib(dir_path, zfile):
                 if file_ext[1] != '.zip':
                     zfile.write(path_str)
 
-
-
 def update_lib(lib_dir, zfile):
     print("\tUpdating " + lib_dir + " library " + zfile + " file.")
 
@@ -47,7 +45,6 @@ def main():
     update_lib('./phyduino_pico', 'phyduino_pico.zip')
     update_lib('./Analog_Front_End_Arduino_Library','Analog_Front_End_Arduino_Library.zip')
     print("Update Finished.") 
-    
 
 if __name__ == "__main__":
     main()

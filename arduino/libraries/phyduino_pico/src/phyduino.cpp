@@ -74,7 +74,7 @@ void set_usbpd_pdo(STUSB4500& usb, std::uint8_t pdo, const float voltage, const 
  */
 void initialize_usbpd() noexcept {
   pinMode(phyduino::usbpd::RESET, OUTPUT);
-  digitalWrite(phyduino::usbpd::RESET, LOW)
+  digitalWrite(phyduino::usbpd::RESET, LOW);
   // Reset STUSB4500 USB-PD Controller
   digitalWrite(phyduino::usbpd::RESET, HIGH);
   delay(10);
@@ -195,7 +195,7 @@ std::uint16_t phyduino::analog_read(pin_t idx) noexcept {
 
   if(idx >= phyduino::gpio::A0 && idx <= phyduino::gpio::A2){
     value = analogRead(idx);
-  }else if(idx >= phyduino::gpio::A3 && idx <= phyduino::gpio::VBUS){
+  }else if(idx >= phyduino::gpio::A3 && idx <= phyduino::gpio::AVBUS){
     std::uint8_t channel = static_cast<std::uint8_t>(idx) - phyduino::gpio::A3;
     value = MAX11635_ADC.analogRead(channel);
   }
@@ -207,7 +207,7 @@ std::uint16_t phyduino::analog_read(pin_t idx) noexcept {
  * @return float USB VBUS voltage value.
  */
 float phyduino::get_vbus() noexcept{
-  auto value = phyduino::analogRead(phyduino::gpio::VBUS);                          // Get VBus ADC value 
+  auto value = phyduino::analog_read(phyduino::gpio::AVBUS);                          // Get VBus ADC value
   float voltage = max11635::driver::to_voltage(value) * phyduino::vbus_multiplier;  // Convert voltage.
   return voltage;
 }

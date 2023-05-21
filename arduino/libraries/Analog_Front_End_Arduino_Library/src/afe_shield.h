@@ -34,8 +34,8 @@ namespace afe_shield {
     float get_temperature(phyduino::pin_t, bool=false, bool=false) noexcept;
     float get_sensor_voltage() noexcept;
     float get_potentiometer() noexcept;
-    bool periodic_ms(unsigned long, unsigned long*, const function<bool()>&) noexcept;
-    bool periodic_us(unsigned long, unsigned long*, const function<bool()>&) noexcept;
+    bool periodic_ms(unsigned long, unsigned long*, const std::function<bool()>&) noexcept;
+    bool periodic_us(unsigned long, unsigned long*, const std::function<bool()>&) noexcept;
 }
 
 #endif

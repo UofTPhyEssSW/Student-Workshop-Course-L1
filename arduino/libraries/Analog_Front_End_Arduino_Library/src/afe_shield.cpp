@@ -60,13 +60,13 @@ float afe_shield::get_potentiometer() noexcept {
  * @return true User executable function ran.
  * @return false User executable function did not run.
  */
-bool afe_shield::periodic_ms(unsigned long t_sample, unsigned long* t_last, const function<bool()>& proc) noexcept {
+bool afe_shield::periodic_ms(unsigned long t_sample, unsigned long* t_last, const std::function<bool()>& proc) noexcept {
     bool executed       { false };
     unsigned long delta { 0 };
     unsigned long ctime { millis() };        // Get system tick in millisecond
 
     if(ctime < *t_last){                 // Check for system tick rollover and calculate difference.
-        delta = (std::numeric_limit<unsigned long>::max() - *t_last) + ctime; 
+        delta = (std::numeric_limits<unsigned long>::max() - *t_last) + ctime; 
     } else {
         delta = ctime - *t_last;
     }
@@ -87,19 +87,19 @@ bool afe_shield::periodic_ms(unsigned long t_sample, unsigned long* t_last, cons
  * @return true 
  * @return false 
  */
-bool afe_shield::periodic_us(unsigned long t_sample, unsigned long* t_last, const function<bool()>& proc) noexcept {
+bool afe_shield::periodic_us(unsigned long t_sample, unsigned long* t_last, const std::function<bool()>& proc) noexcept {
     bool executed { false };
     unsigned long delta;
     unsigned long utime { micros() };
 
     if(utime < *t_last){                 // Check for system tick rollover and calculate difference.
-        delta = (std::numeric_limit<unsigned long>::max() - *t_last) + utime; 
+        delta = (std::numeric_limits<unsigned long>::max() - *t_last) + utime; 
     } else {
         delta = utime - *t_last;
     }
 
     if(delta > t_sample) {                  // If sample period has passed
-        *t_last = ctime;                    // Save current system tick
+        *t_last = utime;                    // Save current system tick
         executed = proc();                  // Run user defined periodic processing function.
     }
 
