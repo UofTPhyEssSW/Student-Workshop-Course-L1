@@ -46,41 +46,66 @@ void max11635::driver::end() noexcept {
   }
 }
 /**
- * @brief Reads any available analog channel on the Phyduino.
- * @param analog_pin [in] Analog pin number. valid values 0 - 3
+ * @brief Set analog channel selection.
+ * @param channel [in] Analog channel number selection [0-3]
+ * @return true Channel set.
+ * @return false Invalid channel number given.
  */
-// data_type analogRead(std::uint8_t) noexcept;
-max11635::driver::data_type max11635::driver::analogRead(std::uint8_t channel) noexcept {
-  #ifdef MAX11635_DEBUG_L2
-    Serial.printf("Selecting external channel : %d\r\n", channel);
-  #endif
-
+bool max11635::driver::set_channel(const std::uint8_t channel) noexcept {
   if(channel > driver::max_channels - 1){
-    return 0;
+    return false;
   }
 
   _regs.conversion.b.CHSEL = static_cast<std::uint8_t>(channel);                // Select channel.
   _regs.conversion.b.SCAN  = 0b11U;                                             // No Scan, Converts N channel once.
   write_nbytes(&_regs.conversion.w);
-  // Start conversion
+
+  return true;
+}
+/**
+ * @brief Starts analog conversion.
+ */
+void max11635::driver::start_conversion() const noexcept {
   digitalWrite(_n_cnvst, LOW);
   delayMicroseconds(1);
   digitalWrite(_n_cnvst, HIGH);
+}
+/**
+ * @brief Gets Conversion Value from ADC.
+ * @return max11635::driver::data_type ADC conversion value
+ */
+max11635::driver::data_type max11635::driver::read_conversion() noexcept {
+  return this->get_conversion();
+}
+/**
+ * @brief Reads any available analog channel on the Phyduino.
+ * @param analog_pin [in] Analog pin number. valid values 0 - 3
+ * @return Number of Bytes transferred.
+ */
+max11635::driver::data_type max11635::driver::analogRead(std::uint8_t channel) noexcept {
+  #ifdef MAX11635_DEBUG_L2
+    Serial.printf("Selecting external channel : %d\r\n", channel);
+  #endif
+
+  if(!this->set_channel(channel)){
+    return 0;
+  }
   
-  // Wait for conversion to finish.
+  // Start conversion
+  start_conversion();  
+
   #ifdef MAX11635_DEBUG_L2
     Serial.println("Starting Analog to digital conversion.");
   #endif
   
-  while(digitalRead(_n_eoc) == HIGH){ }
+  // Wait for conversion to finish.
+  while(!read_conversion());    // Wait for conversion to finish.
 
   #ifdef MAX11635_DEBUG_L2
     Serial.println("Conversion complete.");
   #endif
-
-  auto val = get_conversion();
-
-  return val;
+  // Read Conversion value.
+  return get_conversion();
 }
 /**
  * @brief Configures IO for SPI/GPIO interface.
@@ -157,6 +182,7 @@ void max11635::driver::write_nbytes(std::uint8_t* buf, const std::size_t n) noex
   
   digitalWrite(_cs, HIGH);
   _bus->endTransaction();
+  // delayMicrosecond(5);    // Test delay for stablity of SPI interface
 }
 /**
  * @brief Read N bytes from MAX11635
@@ -177,6 +203,7 @@ void max11635::driver::read_nbytes(std::uint8_t* buf, const std::size_t n) noexc
   
   digitalWrite(_cs, HIGH);
   _bus->endTransaction();
+  // delayMicrosecond(5);    // Test delay for stablity of SPI interface
 }
 /**
  * @brief Initialize MAX11635 ADC.
@@ -190,6 +217,7 @@ void max11635::driver::initialize() noexcept {
   // Set GPIO pins for ADC.
   pinMode(_n_eoc, INPUT_PULLUP);
   pinMode(_n_cnvst, OUTPUT);
+
   digitalWrite(_n_cnvst, HIGH);
   pinMode(_cs, OUTPUT);
   digitalWrite(_cs, HIGH);
@@ -227,31 +255,35 @@ void max11635::driver::initialize() noexcept {
  
   _bus->begin();  // Start SPI Class driver.
   config_regs();
+
+  // Clear EOC pin before starting.
+  if(digitalRead(_n_eoc) == LOW){
+    this->clear_nEOC();
+  }
+
   initialized = true;
 }
 /**
  * @brief Configures ADC to read analog voltages.
  */
 void max11635::driver::config_regs() noexcept{
+  _regs.reset_all();                        // Reset all register values.
   // Reset Register
-  _regs.reset.b.RESET = 0b1;            // Clear FIFO and reset registers.
+  _regs.reset = 0b1 << 3;            // Clear FIFO and reset registers.
   write_nbytes(&_regs.reset.w);
   // Conversion Register
   _regs.conversion.b.CHSEL = 0b000U;    // AIN1 selected.
   _regs.conversion.b.SCAN  = 0b11U;     // No scan selection
   write_nbytes(&_regs.conversion.w);
   // Setup Register
-  // _regs.setup.b.CKSEL   = 0b00U;        // Externally timed through nCNVST
+  _regs.setup.b.CKSEL   = 0b00U;        // Set Conversion Clock to internal. use nCVST to start conversion and wait for nEOC before reading data.
   _regs.setup.b.REFSEL  = 0b01U;        // Voltage reference External single-ended
-  // _regs.setup.b.REFSEL  = 0b00U;        // Voltage reference internal
   _regs.setup.b.DIFFSEL = 0b10U;        // 1 byte of data follows the setup byte and is written to the unipolar mode register.
   _regs.unipolar.w      = 0x00U;        // 1 to configure AIN0 - AIN3 for unipolar differential conversion
   std::uint8_t setup[2] { _regs.setup.w, _regs.unipolar.w };
   write_nbytes(setup, sizeof(setup));
   // Averaging Register
-  _regs.averaging.b.AVGON = 0b0U;       // Averaging turned off.
-  _regs.averaging.b.NAVG  = 0b00U;
-  _regs.averaging.b.NSCAN = 0b00U;
+  _regs.averaging = 0x00;
   write_nbytes(&_regs.averaging.w);
 
   #ifdef MAX11635_DEBUG_L2

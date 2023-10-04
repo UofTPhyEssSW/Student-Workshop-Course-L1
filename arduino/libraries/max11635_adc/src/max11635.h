@@ -25,6 +25,7 @@
 
 namespace max11635 {
   static constexpr float conv_vbus = 10.8F;
+  
   /**
    * @brief MAX11635 Driver Class
    */
@@ -52,8 +53,33 @@ namespace max11635 {
       
       data_type analogRead(std::uint8_t) noexcept;
       float get_voltage(std::uint8_t) noexcept;
-
+      /**
+       * @brief Checks if ADC has been initialized.
+       * @return true When ADC is initiailized.
+       * @return false When ADC is not initiailized
+       */
       bool is_initialized() const noexcept { return initialized; }
+
+      bool set_channel(std::uint8_t) noexcept;
+      void start_conversion() const noexcept;
+      /**
+       * @brief Check if the nEOC pin is LOW
+       * @return true when nEOC pin is LOW 
+       * @return false when nEOC is HIGH.
+       */
+      bool conversion_ready() const noexcept { 
+        return digitalRead(_n_eoc) == LOW;
+      }
+      /**
+       * @brief Clears nEOC pin to HIGH.
+       */
+      void clear_nEOC() noexcept {
+        digitalWrite(_cs, LOW);
+        delayMicroseconds(2);
+        digitalWrite(_cs, HIGH);
+      }
+
+      data_type read_conversion() noexcept;
       /**
        * @brief Set the drivers pointer
        * @param spi Pointer to SPI module.
@@ -74,12 +100,21 @@ namespace max11635 {
         _settings = settings;
         return *this;
       }
+      /**
+       * @brief Operator bool 
+       * @return true if nEOC pin is LOW
+       * @return false if nEOC pin is HIGH.
+       */
+      operator bool() const noexcept {
+        return this->conversion_ready();
+      }
 
       static float to_voltage(data_type) noexcept;
     private:
       static constexpr std::uint8_t dummy_byte { 0x00 };
-      static constexpr std::uint32_t fclock_default { 4'800'000 };
+      static constexpr std::uint32_t fclock_default { 4'000'000 };
       static arduino::SPISettings default_setting;
+      
       /*
       * SPI MODE 0 : CPOL = 0; CPHA = 0; <= THIS OR
       * SPI MODE 1 : CPOL = 0; CPHA = 1;

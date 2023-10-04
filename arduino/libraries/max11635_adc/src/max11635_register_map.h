@@ -25,8 +25,28 @@ namespace max11635 {
   };
 
   union max1163x_conversion_t final {
+  public:
+    max1163x_conversion_t() noexcept: max1163x_conversion_t(RESET_VALUE)  { }
+    explicit max1163x_conversion_t(const adc_reg_t val) noexcept : w(ADDRESS_PREFIX | (val & DATA_MASK)) { }
+
+    max1163x_conversion_t(const max1163x_conversion_t&) noexcept = default;
+    max1163x_conversion_t& operator=(const max1163x_conversion_t&) noexcept = default;
+    max1163x_conversion_t(max1163x_conversion_t&&) noexcept = default;
+    max1163x_conversion_t& operator=(max1163x_conversion_t&&) noexcept = default;
+
+    max1163x_conversion_t& operator=(const adc_reg_t val) noexcept {
+      w = ADDRESS_PREFIX | (val & DATA_MASK);
+      return *this;
+    }
+
+    void reset() noexcept{ *this = RESET_VALUE; }
+
     adc_reg_t w;
     max1163x_conversion_bf b;
+  private:
+    static constexpr adc_reg_t ADDRESS_PREFIX  { 0x80 };
+    static constexpr adc_reg_t RESET_VALUE { 0x00 };
+    static constexpr adc_reg_t DATA_MASK { 0x3E };
   };
 
   struct max1163x_setup_bf final {
@@ -37,8 +57,28 @@ namespace max11635 {
   };
 
   union max1163x_setup_t final {
+  public:
+    max1163x_setup_t() noexcept : max1163x_setup_t(RESET_VALUE){ }
+    explicit max1163x_setup_t(const adc_reg_t val) noexcept : w(ADDRESS_PREFIX | (val & DATA_MASK)) { }
+
+    max1163x_setup_t(const max1163x_setup_t&) noexcept = default;
+    max1163x_setup_t& operator=(const max1163x_setup_t&) noexcept = default;
+    max1163x_setup_t(max1163x_setup_t&&) noexcept = default;
+    max1163x_setup_t& operator=(max1163x_setup_t&&) noexcept = default;
+
+    max1163x_setup_t& operator=(const adc_reg_t val) noexcept {
+      w = ADDRESS_PREFIX | (val & DATA_MASK);
+      return *this;
+    }
+
+    void reset() noexcept{ *this = RESET_VALUE; }
+
     adc_reg_t w;
     max1163x_setup_bf b;
+  private:
+    static constexpr adc_reg_t ADDRESS_PREFIX { 0x40 };
+    static constexpr adc_reg_t RESET_VALUE { 0x00 };
+    static constexpr adc_reg_t DATA_MASK { 0x3F };
   };
 
   struct max1163x_averaging_bf final {
@@ -49,8 +89,28 @@ namespace max11635 {
   };
 
   union max1163x_averaging_t final {
+  public:
+    max1163x_averaging_t() noexcept : max1163x_averaging_t(RESET_VALUE) { }
+    explicit max1163x_averaging_t(const adc_reg_t val) noexcept : w(ADDRESS_PREFIX | (val & DATA_MASK)){ }
+
+    max1163x_averaging_t(const max1163x_averaging_t&) noexcept = default;
+    max1163x_averaging_t& operator=(const max1163x_averaging_t&) noexcept = default;
+    max1163x_averaging_t(max1163x_averaging_t&&) noexcept = default;
+    max1163x_averaging_t& operator=(max1163x_averaging_t&&) noexcept = default;
+
+    max1163x_averaging_t& operator=(const adc_reg_t val) noexcept {
+      w = ADDRESS_PREFIX | (val & DATA_MASK);
+      return *this;
+    }
+
+    void reset() noexcept{ *this = RESET_VALUE; }
+
     adc_reg_t w;
     max1163x_averaging_bf b;
+  private:
+    static constexpr adc_reg_t ADDRESS_PREFIX { 0x20 };
+    static constexpr adc_reg_t RESET_VALUE { 0x00 };
+    static constexpr adc_reg_t DATA_MASK { 0x1F};
   };
 
   struct max1163x_reset_bf final {
@@ -60,8 +120,28 @@ namespace max11635 {
   };
 
   union max1163x_reset_t final {
+  public:
+    max1163x_reset_t() noexcept : max1163x_reset_t(RESET_VALUE) { }
+    explicit max1163x_reset_t(const adc_reg_t val) noexcept : w(ADDRESS_PREFIX | (val & DATA_MASK)) { }
+
+    max1163x_reset_t(const max1163x_reset_t&) noexcept = default;
+    max1163x_reset_t& operator=(const max1163x_reset_t&) noexcept = default;
+    max1163x_reset_t(max1163x_reset_t&&) noexcept = default;
+    max1163x_reset_t& operator=(max1163x_reset_t&&) noexcept = default;
+
+    max1163x_reset_t& operator=(const adc_reg_t val) noexcept {
+      w = ADDRESS_PREFIX | (val & DATA_MASK);
+      return *this;
+    }
+
+    void reset() noexcept{ *this = RESET_VALUE; }
+
     adc_reg_t w;
     max1163x_reset_bf b;
+  private:
+    static constexpr adc_reg_t ADDRESS_PREFIX { 0x10 };
+    static constexpr adc_reg_t RESET_VALUE { 0x00 };
+    static constexpr adc_reg_t DATA_MASK { 0x08 };
   };
 
   struct max1163x_unipolar_bf final {
@@ -73,8 +153,27 @@ namespace max11635 {
   };
 
   union max1163x_unipolar_t final {
+  public:
+    max1163x_unipolar_t() noexcept : max1163x_unipolar_t(RESET_VALUE) { }
+    explicit max1163x_unipolar_t(const adc_reg_t val) noexcept : w(val & DATA_MASK) { }
+
+    max1163x_unipolar_t(const max1163x_unipolar_t&) noexcept = default;
+    max1163x_unipolar_t& operator=(const max1163x_unipolar_t&) noexcept = default;
+    max1163x_unipolar_t(max1163x_unipolar_t&&) noexcept = default;
+    max1163x_unipolar_t& operator=(max1163x_unipolar_t&&) noexcept = default;
+
+    max1163x_unipolar_t& operator=(const adc_reg_t val) noexcept {
+      w = val & DATA_MASK;
+      return *this;
+    }
+
+    void reset() noexcept{ *this = RESET_VALUE; }
+
     adc_reg_t w;
     max1163x_unipolar_bf b;
+  private:
+    static constexpr adc_reg_t RESET_VALUE { 0x00 };
+    static constexpr adc_reg_t DATA_MASK { 0xF0 };
   };
 
   struct max1163x_bipolar_bf final {
@@ -86,18 +185,43 @@ namespace max11635 {
   };
 
   union max1163x_bipolar_t final {
+  public:
+    max1163x_bipolar_t() noexcept : max1163x_bipolar_t(RESET_VALUE){ }
+    explicit max1163x_bipolar_t(const adc_reg_t val) noexcept : w(val & DATA_MASK){ }
+
+    max1163x_bipolar_t(const max1163x_bipolar_t&) noexcept = default;
+    max1163x_bipolar_t& operator=(const max1163x_bipolar_t&) noexcept = default;
+    max1163x_bipolar_t(max1163x_bipolar_t&&) noexcept = default;
+    max1163x_bipolar_t& operator=(max1163x_bipolar_t&&) noexcept = default;
+
+    max1163x_bipolar_t& operator=(const adc_reg_t val) noexcept {
+      w = val & DATA_MASK;
+      return *this;
+    }
+
+    void reset() noexcept{ *this = RESET_VALUE; }
+
     adc_reg_t w;
     max1163x_bipolar_bf b;
+  private:
+    static constexpr adc_reg_t RESET_VALUE { 0x00 };
+    static constexpr adc_reg_t DATA_MASK { 0xF0 };
   };
 
   struct registers_t final {
-    registers_t() noexcept {
-      conversion.w  = 0x80;
-      setup.w       = 0x40;
-      averaging.w   = 0x20;
-      reset.w       = 0x10;
-      unipolar.w    = 0x00;
-      bipolar.w     = 0x00;
+    registers_t() noexcept = default;
+
+    registers_t(const registers_t&) noexcept;
+    registers_t& operator=(const registers_t&) noexcept;
+    registers_t(registers_t&&) noexcept;
+    registers_t& operator=(registers_t&&) noexcept;
+
+    void reset_all() noexcept {
+      conversion.reset();
+      setup.reset();
+      averaging.reset();
+      unipolar.reset();
+      bipolar.reset();
     }
 
     max1163x_conversion_t conversion;
@@ -111,3 +235,4 @@ namespace max11635 {
 }
 
 #endif /* MAX11635_REGS_H */
+

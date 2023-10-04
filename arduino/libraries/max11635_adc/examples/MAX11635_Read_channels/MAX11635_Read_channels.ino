@@ -13,6 +13,7 @@
 #include "max11635.h"
 
 #define ARDUINO_SERIAL_PLOTTER  // Comment out for text output instead of Serial plotter format.
+#define GET_ADC_COUNT           // Comment out to get the converted voltage value.
 
 // Phyduino Pico Rev C GPIO assignments (Change accoding to board being used.)
 static constexpr std::uint32_t LED_IO       { 5 };
@@ -47,9 +48,17 @@ void loop() {
 
     #ifdef ARDUINO_SERIAL_PLOTTER
     if(i == max11635::driver::max_channels - 1){
-      Serial.printf("CH[%d]:%.3f\r\n", i, max11635::driver::to_voltage(Sample[i]));
+      #ifdef GET_ADC_COUNT
+        Serial.printf("CH[%d]:0x%04x\r\n", i, Sample[i]);
+      #else
+        Serial.printf("CH[%d]:%.3f\r\n", i, max11635::driver::to_voltage(Sample[i]));
+      #endif
     } else{
-      Serial.printf("CH[%d]:%.3f,", i, max11635::driver::to_voltage(Sample[i]));
+      #ifdef GET_ADC_COUNT
+        Serial.printf("CH[%d]:0x%04x,", i, Sample[i]);
+      #else
+        Serial.printf("CH[%d]:%.3f,", i, max11635::driver::to_voltage(Sample[i]));
+      #endif
     }
     #else
     // Read Analog value
