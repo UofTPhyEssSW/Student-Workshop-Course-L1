@@ -1,10 +1,12 @@
 #folders
 venv
 .idea
+.vscode
 hardware/phyduino_pico/phyduino_pico-backups
 hardware/phyduino_pico/exports
 hardware/analog_front_end_shield/analog_front_end_shield-backups
 hardware/analog_front_end_shield/exports
+arduino/libraries/__pycache__
 
 # Prerequisites
 *.d
