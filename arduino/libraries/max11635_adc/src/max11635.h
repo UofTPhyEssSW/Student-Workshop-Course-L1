@@ -36,12 +36,13 @@ namespace max11635 {
       using SPIModule = SPIClassRP2040;
       
       static constexpr float v_reference         { 2.048F };                 // ADC voltage reference.
+      static constexpr float int_v_reference     { 2.500F };                 // MAX11635 Internal Voltage reference value (default)
       static constexpr float v_resolution        { v_reference / 4096.0F };  // ADC Voltage steps.
       static constexpr std::size_t max_channels  { 4 };                      // Maximum number of analog channels.
           
       driver() noexcept = delete;
       
-      driver(SPIModule* bus) noexcept : _bus(bus) { }
+      driver(SPIModule* bus) noexcept : _bus(bus), calibration_offset(CALIBRATION_OFFSET_DEFAULT) { }
       
       void configure_io(pin_t, pin_t, pin_t, pin_t, pin_t, pin_t) noexcept;
       
@@ -79,7 +80,16 @@ namespace max11635 {
         digitalWrite(_cs, HIGH);
       }
 
+      void set_calibration_offset(const data_type cal) noexcept {
+        calibration_offset = cal;
+      }
+
       data_type read_conversion() noexcept;
+      /**
+       * @brief Get the last sampled channel value.
+       * @return data_type last sampled channel value.
+       */
+      data_type get_last_sample() const noexcept { return current_sample; }
       /**
        * @brief Set the drivers pointer
        * @param spi Pointer to SPI module.
@@ -110,11 +120,12 @@ namespace max11635 {
       }
 
       static float to_voltage(data_type) noexcept;
+      static void InterruptHandler(driver*) noexcept;
     private:
       static constexpr std::uint8_t dummy_byte { 0x00 };
       static constexpr std::uint32_t fclock_default { 4'000'000 };
+      static constexpr data_type CALIBRATION_OFFSET_DEFAULT { 490 };
       static arduino::SPISettings default_setting;
-      
       /*
       * SPI MODE 0 : CPOL = 0; CPHA = 0; <= THIS OR
       * SPI MODE 1 : CPOL = 0; CPHA = 1;
@@ -130,7 +141,11 @@ namespace max11635 {
       pin_t _cs         { 21 };
       pin_t _n_eoc      { 19 };
       pin_t _n_cnvst    { 18 };
+      // Status variables
       bool initialized  { false };
+      bool sample_ready { false };
+      data_type current_sample { 0 };
+      data_type calibration_offset { 0 };
 
       void write_nbytes(std::uint8_t*, std::size_t = 1) noexcept;
       void read_nbytes(std::uint8_t*, std::size_t = 1) noexcept;
@@ -141,5 +156,7 @@ namespace max11635 {
 }
 
 extern max11635::driver MAX11635_ADC;
+
+void MAX11635_InteruptHandler() noexcept __attribute__((weak));
 
 #endif

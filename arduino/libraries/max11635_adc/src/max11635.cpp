@@ -15,10 +15,20 @@ arduino::SPISettings max11635::driver::default_setting = SPISettings(fclock_defa
 max11635::driver MAX11635_ADC { &SPI }; /// Default SPI0 
 
 /**
+ * @brief Default Interrupt handler for the MAX11635 ADC on the Phyduino Board, can be overridden by function of the same name.
+ */
+void MAX11635_InteruptHandler() noexcept {
+  max11635::driver::InterruptHandler(&MAX11635_ADC);
+}
+
+/**
  * @defgroup MAX11635_DRV_PUBLIC MAX11635 Driver public functions
  * @{
  */
-
+void max11635::driver::InterruptHandler(driver* drv) noexcept{
+  drv->current_sample = drv->read_conversion();
+  drv->sample_ready = true;
+}
 /**
  * @brief Initializes and Starts MAX11635 driver.
  */
@@ -87,26 +97,26 @@ max11635::driver::data_type max11635::driver::analogRead(std::uint8_t channel) n
     Serial.printf("Selecting external channel : %d\r\n", channel);
   #endif
 
-  if(!this->set_channel(channel)){
+  if(!this->set_channel(channel)){    // Set channel for next conversion.
     return 0;
   }
   
-  // Start conversion
-  start_conversion();  
+  start_conversion();                 // Start conversion
 
   #ifdef MAX11635_DEBUG_L2
     Serial.println("Starting Analog to digital conversion.");
   #endif
   
-  // Wait for conversion to finish.
-  while(!read_conversion());    // Wait for conversion to finish.
+  while(!sample_ready);               // Wait for conversion to finish. (flag set in interrupt function MAX11635_InteruptHandler())
+  sample_ready = false;               // Reset sample flag for next conversion.
 
   #ifdef MAX11635_DEBUG_L2
     Serial.println("Conversion complete.");
   #endif
-  // Read Conversion value.
-  return get_conversion();
+  
+  return current_sample; // Return new sample.
 }
+
 /**
  * @brief Configures IO for SPI/GPIO interface.
  * @param mosi [in] SPI MOSI IO index.
@@ -134,10 +144,11 @@ void max11635::driver::configure_io(pin_t mosi,
  * @brief [static] Converts the ADC value to a voltage.
  */
 float max11635::driver::to_voltage(const data_type val) noexcept{
-  return static_cast<float>(val) * max11635::driver::v_resolution;
+  float voltage = static_cast<float>(val) * max11635::driver::v_resolution;
+  return voltage;
 }
 /**
- * @brief Gets voltage from ADC channel.
+ * @brief 
  * @param channel [in] sampled channel number.
  * @return float Value of the signal in volts.
  */
@@ -261,10 +272,12 @@ void max11635::driver::initialize() noexcept {
     this->clear_nEOC();
   }
 
+  attachInterrupt(digitalPinToInterrupt(_n_eoc), MAX11635_InteruptHandler, LOW);
+
   initialized = true;
 }
 /**
- * @brief Configures ADC to read analog voltages.
+ * @brief Configures ADC to read analog data.
  */
 void max11635::driver::config_regs() noexcept{
   _regs.reset_all();                        // Reset all register values.
@@ -298,25 +311,21 @@ void max11635::driver::config_regs() noexcept{
   #endif
 }
 /**
- * @brief Get the conversion value for the ADC.
+ * @brief Get the conversion value for the ADC. This should be call after nEOC pin goes LOW.
  */
 max11635::driver::data_type max11635::driver::get_conversion() noexcept {
+  // static int j = 0;
   std::uint8_t adc_rd[2] { };
 
   read_nbytes(adc_rd, sizeof(adc_rd));
 
-  #ifdef MAX11635_DEBUG_L2
-    Serial.printf("\tADC bytes [0..1] : 0x%02x, 0x%02x\r\n", adc_rd[0], adc_rd[1]);
-  #endif
-
   data_type analog_val = static_cast<data_type>(adc_rd[0]) << 8U;
   analog_val |= static_cast<data_type>(adc_rd[1]);
 
-  #ifdef MAX11635_DEBUG_L2
-    Serial.printf("\tADC value: 0x%04x\r\n\r\n", analog_val);
-  #endif
+  // Corrects ADC value count, Calibration should be measure and set in the user program.
+  current_sample = analog_val == 0 ? analog_val : analog_val + calibration_offset;
 
-  return analog_val;
+  return current_sample;
 }
 
 /** @} */
