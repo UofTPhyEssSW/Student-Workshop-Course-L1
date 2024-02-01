@@ -35,8 +35,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.45,
-          "width": 1.175
+          "height": 0.64,
+          "width": 0.715
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -46,7 +46,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.3
+          "min_clearance": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -638,7 +638,80 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "DIFF_90",
+        "pattern": "/USB_*D_?"
+      },
+      {
+        "netclass": "ANALOG_IO",
+        "pattern": "/A?[0-5]"
+      },
+      {
+        "netclass": "DIGITAL_IO",
+        "pattern": "/D[1-9]+"
+      },
+      {
+        "netclass": "MEM_IF",
+        "pattern": "/XIP_*"
+      },
+      {
+        "netclass": "ANALOG_IO",
+        "pattern": "/AIN*"
+      },
+      {
+        "netclass": "ANALOG_IO",
+        "pattern": "/VBUS_MONITOR"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3.3V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3.3VA"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+1V1"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "DIGITAL_IO",
+        "pattern": "/ADC.*"
+      },
+      {
+        "netclass": "DIGITAL_IO",
+        "pattern": "/CPU_*"
+      },
+      {
+        "netclass": "DIGITAL_IO",
+        "pattern": "/DEBUG*"
+      },
+      {
+        "netclass": "DIGITAL_IO",
+        "pattern": "~{RESET}"
+      },
+      {
+        "netclass": "DIGITAL_IO",
+        "pattern": "/USBPD.S*"
+      },
+      {
+        "netclass": "DIGITAL_IO",
+        "pattern": "/USBPD.~*"
+      },
+      {
+        "netclass": "ANALOG_IO",
+        "pattern": "/LED"
+      },
+      {
+        "netclass": "ANALOG_IO",
+        "pattern": "/AREF"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -646,7 +719,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "step/Phyduino_Pico_RevD.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
