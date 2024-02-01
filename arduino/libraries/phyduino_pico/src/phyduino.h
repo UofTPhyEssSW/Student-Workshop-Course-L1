@@ -27,9 +27,26 @@ namespace phyduino {
   using ms_time_t = unsigned long;
   using baud_rate_t = unsigned long;
 
-  static constexpr float internal_adc_vref        { 3.30F };
-  static constexpr float internal_adc_calibration { 4.046F };
-  static constexpr float internal_adc_resolution  { (internal_adc_vref / 4096.0F) * internal_adc_calibration };
+  static constexpr float R15_VALUE                { 100e3F  };
+  static constexpr float R14_VALUE                { 10.2e3F };
+  static constexpr float VBUS_DIV_RATIO           { R14_VALUE / (R15_VALUE + R14_VALUE) };
+  static constexpr float VBUS_DIV_RATIO_INV       { 1 / VBUS_DIV_RATIO };
+
+  namespace adc {
+    namespace internal {
+      static constexpr std::uint32_t bits   { 12 };
+      static constexpr float vref         { 3.30F };
+      static constexpr float calibration  { 4.046F };
+      static constexpr float resolution   { (vref / static_cast<float>(1 << bits)) * calibration };
+    } 
+    namespace external {
+      static constexpr std::uint32_t bits   { 12 };
+      static constexpr float vref         { 2.048F };
+      static constexpr float resolution   { vref / static_cast<float>(1 << bits) };
+    }
+  }
+  // static constexpr float internal_adc_calibration { 4.046F };
+  // static constexpr float internal_adc_resolution  { (INTERNAL_ADC_VREF / std::pwr(2.0F, INTERNAL_ADC_BITS) 4096.0F) * internal_adc_calibration };
   static constexpr float vbus_multiplier          { 10.8F };
 
   static constexpr ms_time_t led_delay            { 400 };        // 400ms LED blink time
@@ -38,9 +55,14 @@ namespace phyduino {
 
   void led_heart_beat() noexcept;
   void pin_heart_beat(pin_t, ms_time_t, ms_time_t*) noexcept;
+  
   void initialize_board() noexcept;
-  float to_voltage(std::uint16_t) noexcept;
+
+  float to_voltage(std::uint16_t, bool = false) noexcept;
+  
   std::uint16_t analog_read(pin_t) noexcept;
+  float analog_voltage(pin_t) noexcept;
+
   float get_vbus() noexcept;
 }
 

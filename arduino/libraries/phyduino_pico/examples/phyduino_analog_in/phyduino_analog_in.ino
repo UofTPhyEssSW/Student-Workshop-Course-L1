@@ -28,15 +28,15 @@ void setup() {
 void loop() {
   phyduino::led_heart_beat();   // Blinks D8 Green LED every 400ms
 
-  auto ctime = millis();
+  auto time_ms = millis();
 
-  if((ctime - last_sample) > sample_rate){ 
+  if((time_ms - last_sample) > sample_rate){ 
     std::uint16_t value;
     float voltage;
 
     #ifdef EXTERNAL_ADC // Analog input pins A3 - A5
       value   = phyduino::analog_read(phyduino::gpio::A3);
-      voltage = max11635:driver::to_voltage(value);
+      voltage = max11635::driver::to_voltage(value);
       Serial.printf("External");
     #else // Analog input pins A0 - A2
       value   = phyduino::analog_read(phyduino::gpio::A0);
@@ -51,5 +51,7 @@ void loop() {
       Serial.printf("\tvalue = %d\r\n", value);
       Serial.printf("\tvoltage = %.3f\r\n", voltage);
     #endif
+
+    last_sample = time_ms;
   }
 }

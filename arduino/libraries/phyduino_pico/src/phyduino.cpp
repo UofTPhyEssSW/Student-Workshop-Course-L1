@@ -75,10 +75,6 @@ void set_usbpd_pdo(STUSB4500& usb, std::uint8_t pdo, const float voltage, const 
 void initialize_usbpd() noexcept {
   pinMode(phyduino::usbpd::RESET, OUTPUT);
   digitalWrite(phyduino::usbpd::RESET, LOW);
-  // Reset STUSB4500 USB-PD Controller
-  digitalWrite(phyduino::usbpd::RESET, HIGH);
-  delay(10);
-  digitalWrite(phyduino::usbpd::RESET, LOW);
 
   // Set I2C pins and start I2C Driver.
   Wire1.setSCL(phyduino::usbpd::SCL);
@@ -165,7 +161,7 @@ void phyduino::led_heart_beat() noexcept {
  * @param delay [in] Toggle Delay.
  * @param last [in] Pointer to last time index.
  */
-void phyduino::pin_heart_beat(pin_t idx, ms_time_t delay, ms_time_t* last) noexcept {
+void phyduino::pin_heart_beat(const pin_t idx, const ms_time_t delay, ms_time_t* last) noexcept {
   // Check if time delay has passed.
   if(auto time = millis(); time - *last > delay){
     // Toggle LED 
@@ -180,10 +176,18 @@ void phyduino::pin_heart_beat(pin_t idx, ms_time_t delay, ms_time_t* last) noexc
 /**
  * @brief Converst Internal ADC value to voltage.
  * @param value [in] ADC output value.
+ * @param ext [in] true for external ADC pin (A3-A5), false for A0-A2 (default)
  * @return float ADC measured voltage.
  */
-float phyduino::to_voltage(std::uint16_t value) noexcept {
-  return static_cast<float>(value) * phyduino::internal_adc_resolution;
+float phyduino::to_voltage(const std::uint16_t value, const bool ext) noexcept {
+  float voltage;
+
+  if(ext)
+    voltage = max11635::driver::to_voltage(value);
+  else
+    voltage = static_cast<float>(value) * phyduino::adc::internal::resolution;
+  
+  return voltage;
 }
 /**
  * @brief Analog Read for the Phyduino Pico 
@@ -201,6 +205,21 @@ std::uint16_t phyduino::analog_read(pin_t idx) noexcept {
   }
 
   return value;
+}
+/**
+ * @brief 
+ * @param idx 
+ * @return float 
+ */
+float phyduino::analog_voltage(pin_t idx) noexcept {
+  // Make sure pin index is valid.
+  if(idx < phyduino::gpio::A0 && idx > phyduino::gpio::A5){
+    return 0.0F;
+  }
+
+  std::uint16_t value = phyduino::analog_read(idx);   // Read ADC value for selected analog pin.
+  bool ext_adc = idx > phyduino::gpio::A2;            // Select voltage converstion based on analog pin index
+  return phyduino::to_voltage(value, ext_adc);
 }
 /**
  * @brief Get Voltage value of USB VBUS.
