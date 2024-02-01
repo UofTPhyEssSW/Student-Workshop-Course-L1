@@ -40,3 +40,6 @@ arduino/libraries/__pycache__
 *.exe
 *.out
 *.app
+
+cmake-*/
+CMakeLists.txt
